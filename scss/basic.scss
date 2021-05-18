@@ -1,0 +1,13 @@
+/*global code start */
+@import "./includes/_code.scss";
+@import "./includes/_grid.scss";
+/*global code end */
+
+/*pages start*/
+@import "./pages/home";
+@import "./pages/class";
+@import "./pages/about";
+@import "./pages/pricing";
+@import "./pages/bloge";
+@import "./pages/footer";
+/*pages end*/

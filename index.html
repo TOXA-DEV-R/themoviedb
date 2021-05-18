@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./css/basic.css">
+  <title>Onedy</title>
+</head>
+
+<body>
+  <!-- button-UP -->
+  <button type="button" class="btn-up">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </button>
+  <!-- button-UP / -->
+  <!-- header start -->
+  <header>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-auto navbar__left display-flex align-items-center">
+            <a href="/" class="navbar__logo"><svg width="108" height="29" viewBox="0 0 108 29" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M49.3926 6.67358C45.3301 6.67358 42.791 9.47632 42.791 13.9587C42.791 18.4412 45.3301 21.2341 49.3926 21.2341C53.4453 21.2341 55.9941 18.4412 55.9941 13.9587C55.9941 9.47632 53.4453 6.67358 49.3926 6.67358ZM49.3926 8.59741C52.0684 8.59741 53.748 10.6677 53.748 13.9587C53.748 17.24 52.0684 19.3103 49.3926 19.3103C46.7168 19.3103 45.0273 17.24 45.0273 13.9587C45.0273 10.6677 46.7168 8.59741 49.3926 8.59741ZM57.8301 20.9998H59.9395V15.0134C59.9395 13.4216 60.8965 12.3669 62.3809 12.3669C63.8457 12.3669 64.5684 13.2166 64.5684 14.7595V20.9998H66.6875V14.3494C66.6875 11.9958 65.3887 10.5505 63.123 10.5505C61.541 10.5505 60.4473 11.2732 59.8906 12.4451H59.8418V10.7263H57.8301V20.9998ZM75.5352 17.9822C75.252 18.8806 74.3633 19.4861 73.1621 19.4861C71.4727 19.4861 70.3984 18.3044 70.3984 16.5173V16.3904H77.6543V15.6677C77.6543 12.5525 75.877 10.5408 73.0254 10.5408C70.125 10.5408 68.2695 12.6892 68.2695 15.9119C68.2695 19.1541 70.0957 21.1951 73.1133 21.1951C75.4668 21.1951 77.2441 19.8572 77.5371 17.9822H75.5352ZM73.0254 12.24C74.5 12.24 75.4961 13.3435 75.5449 14.9158H70.4082C70.5156 13.363 71.5508 12.24 73.0254 12.24ZM83.1523 21.1755C84.6465 21.1755 85.8184 20.4236 86.4238 19.2517H86.4629V20.9998H88.5137V6.90796H86.3945V12.4353H86.3555C85.7793 11.3025 84.6074 10.5603 83.1328 10.5603C80.5547 10.5603 78.8359 12.6208 78.8359 15.863C78.8359 19.1052 80.5547 21.1755 83.1523 21.1755ZM83.709 12.3376C85.3301 12.3376 86.4141 13.7341 86.4141 15.863C86.4141 18.0115 85.3301 19.3884 83.709 19.3884C82.0391 19.3884 80.9941 18.031 80.9941 15.863C80.9941 13.7048 82.0391 12.3376 83.709 12.3376ZM91.707 24.8279C93.8359 24.8279 94.8516 24.0271 95.7305 21.5369L99.5781 10.7263H97.3516L94.7539 19.0857H94.7148L92.1172 10.7263H89.832L93.543 21.0095C93.543 21.0193 93.3574 21.6248 93.3574 21.6443C93.0352 22.699 92.5078 23.1091 91.5312 23.1091C91.3555 23.1091 91.0039 23.1091 90.8477 23.0701V24.7791C91.0039 24.8083 91.5312 24.8279 91.707 24.8279Z"
+                  fill="#04004D" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M15.2683 18.147C17.9501 22.7666 23.8898 24.3494 28.5349 21.6823L29.4058 23.1824C23.9276 26.3278 16.9227 24.4612 13.7599 19.0131L15.2683 18.147Z"
+                  fill="#FF5722" />
+                <path
+                  d="M31.9999 23.0027C31.9999 25.1203 30.2738 26.837 28.1445 26.837C26.0152 26.837 24.2891 25.1203 24.2891 23.0027C24.2891 20.8851 26.0152 19.1685 28.1445 19.1685C30.2738 19.1685 31.9999 20.8851 31.9999 23.0027Z"
+                  fill="#FF5722" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 13.0343C0 5.92333 5.72484 0.142133 12.841 0.000488281C11.8929 1.83714 11.245 3.84619 10.9597 5.96652C7.76576 6.77207 5.3976 9.71642 5.3976 13.2253C5.3976 17.3546 8.67725 20.7021 12.7229 20.7021C13.2713 20.7021 13.8057 20.6406 14.3197 20.524C15.5323 22.3824 17.2227 23.7684 19.1354 24.6142C17.331 25.5449 15.2815 26.0708 13.1084 26.0708C5.86884 26.0708 0 20.2341 0 13.0343ZM20.3993 23.8699C23.9076 21.5305 26.2169 17.5506 26.2169 13.0343C26.2169 7.45022 22.6866 2.68617 17.7245 0.82912C16.6559 2.47419 15.9238 4.34751 15.6225 6.35715C18.226 7.50375 20.0482 10.1473 20.0482 13.2253C20.0482 16.3626 18.1551 19.0486 15.4712 20.1581C16.7136 21.9363 18.4573 23.2005 20.3993 23.8699Z"
+                  fill="#FF5722" />
+              </svg></a>
+            <ul class="navbar__items">
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Home</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#class" class="navbar__link" id="navbar-link">Class</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#about" class="navbar__link" id="navbar-link">About</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#pricing" class="navbar__link" id="navbar-link">Pricing</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#blogs" class="navbar__link" id="navbar-link">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-auto navbar__right">
+            <div class="navbar__register">
+              <div>
+                <button class="btn">Login</button>
+                <button class="btn">Register</button>
+              </div>
+              <button class="btn-bars"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="navbar-modal">
+        <div class="navbar-top">
+          <a href="/" class="navbar__logo"><svg width="108" height="29" viewBox="0 0 108 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M49.3926 6.67358C45.3301 6.67358 42.791 9.47632 42.791 13.9587C42.791 18.4412 45.3301 21.2341 49.3926 21.2341C53.4453 21.2341 55.9941 18.4412 55.9941 13.9587C55.9941 9.47632 53.4453 6.67358 49.3926 6.67358ZM49.3926 8.59741C52.0684 8.59741 53.748 10.6677 53.748 13.9587C53.748 17.24 52.0684 19.3103 49.3926 19.3103C46.7168 19.3103 45.0273 17.24 45.0273 13.9587C45.0273 10.6677 46.7168 8.59741 49.3926 8.59741ZM57.8301 20.9998H59.9395V15.0134C59.9395 13.4216 60.8965 12.3669 62.3809 12.3669C63.8457 12.3669 64.5684 13.2166 64.5684 14.7595V20.9998H66.6875V14.3494C66.6875 11.9958 65.3887 10.5505 63.123 10.5505C61.541 10.5505 60.4473 11.2732 59.8906 12.4451H59.8418V10.7263H57.8301V20.9998ZM75.5352 17.9822C75.252 18.8806 74.3633 19.4861 73.1621 19.4861C71.4727 19.4861 70.3984 18.3044 70.3984 16.5173V16.3904H77.6543V15.6677C77.6543 12.5525 75.877 10.5408 73.0254 10.5408C70.125 10.5408 68.2695 12.6892 68.2695 15.9119C68.2695 19.1541 70.0957 21.1951 73.1133 21.1951C75.4668 21.1951 77.2441 19.8572 77.5371 17.9822H75.5352ZM73.0254 12.24C74.5 12.24 75.4961 13.3435 75.5449 14.9158H70.4082C70.5156 13.363 71.5508 12.24 73.0254 12.24ZM83.1523 21.1755C84.6465 21.1755 85.8184 20.4236 86.4238 19.2517H86.4629V20.9998H88.5137V6.90796H86.3945V12.4353H86.3555C85.7793 11.3025 84.6074 10.5603 83.1328 10.5603C80.5547 10.5603 78.8359 12.6208 78.8359 15.863C78.8359 19.1052 80.5547 21.1755 83.1523 21.1755ZM83.709 12.3376C85.3301 12.3376 86.4141 13.7341 86.4141 15.863C86.4141 18.0115 85.3301 19.3884 83.709 19.3884C82.0391 19.3884 80.9941 18.031 80.9941 15.863C80.9941 13.7048 82.0391 12.3376 83.709 12.3376ZM91.707 24.8279C93.8359 24.8279 94.8516 24.0271 95.7305 21.5369L99.5781 10.7263H97.3516L94.7539 19.0857H94.7148L92.1172 10.7263H89.832L93.543 21.0095C93.543 21.0193 93.3574 21.6248 93.3574 21.6443C93.0352 22.699 92.5078 23.1091 91.5312 23.1091C91.3555 23.1091 91.0039 23.1091 90.8477 23.0701V24.7791C91.0039 24.8083 91.5312 24.8279 91.707 24.8279Z"
+                fill="#04004D" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M15.2683 18.147C17.9501 22.7666 23.8898 24.3494 28.5349 21.6823L29.4058 23.1824C23.9276 26.3278 16.9227 24.4612 13.7599 19.0131L15.2683 18.147Z"
+                fill="#FF5722" />
+              <path
+                d="M31.9999 23.0027C31.9999 25.1203 30.2738 26.837 28.1445 26.837C26.0152 26.837 24.2891 25.1203 24.2891 23.0027C24.2891 20.8851 26.0152 19.1685 28.1445 19.1685C30.2738 19.1685 31.9999 20.8851 31.9999 23.0027Z"
+                fill="#FF5722" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 13.0343C0 5.92333 5.72484 0.142133 12.841 0.000488281C11.8929 1.83714 11.245 3.84619 10.9597 5.96652C7.76576 6.77207 5.3976 9.71642 5.3976 13.2253C5.3976 17.3546 8.67725 20.7021 12.7229 20.7021C13.2713 20.7021 13.8057 20.6406 14.3197 20.524C15.5323 22.3824 17.2227 23.7684 19.1354 24.6142C17.331 25.5449 15.2815 26.0708 13.1084 26.0708C5.86884 26.0708 0 20.2341 0 13.0343ZM20.3993 23.8699C23.9076 21.5305 26.2169 17.5506 26.2169 13.0343C26.2169 7.45022 22.6866 2.68617 17.7245 0.82912C16.6559 2.47419 15.9238 4.34751 15.6225 6.35715C18.226 7.50375 20.0482 10.1473 20.0482 13.2253C20.0482 16.3626 18.1551 19.0486 15.4712 20.1581C16.7136 21.9363 18.4573 23.2005 20.3993 23.8699Z"
+                fill="#FF5722" />
+            </svg></a>
+          <button class="btn-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+        <ul class="navbar__items">
+          <li class="navbar__item">
+            <a href="/" class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__link">Class</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__link">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__link">Pricing</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__link">Blog</a>
+          </li>
+        </ul>
+        <div class="navbar__register">
+          <button class="btn">Login</button>
+          <button class="btn">Register</button>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- header_home start -->
+    <div class="header-home">
+      <div class="header-home__container">
+        <div class="row">
+          <div class="col-md-6 header-home__left">
+            <h1 class="header-home__artical">
+              <span>Build</span> your passion by <br> shaping your <span>Skill</span> at <br> Onedy
+            </h1>
+            <p>online learning with thousands of classes on topics including illustration, design, photography, video,
+              and freelancing.</p>
+            <div class="header-home__btns">
+              <button class="btn">Get Started</button>
+              <button class="btn">Learn more</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="header-home__right">
+
+              <div class="header-home__progress">
+                <div class="chart" data-percent="89"><span>89%</span></div>
+              </div>
+
+              <div class="header-home__mentor">
+                <div class="img">
+                  <img src="./img/Vector.png" alt="Vector.png">
+                </div>
+                <p>Nathalie Rohman ~ Instructor</p>
+              </div>
+
+              <div class="header-home__img">
+                <img src="./img/asian-woman.png" alt="asian-mentor.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header_home end -->
+
+  </header>
+  <!-- header end -->
+
+  <!-- section-01 start -->
+  <section class="section-01">
+    <!-- mask-group start -->
+    <div class="mask-group">
+      <div class="container">
+        <div class="row justify-lg-content-between justify-content-around align-items-center">
+          <div class="col-auto">
+            <a href="https://www.google.com/" class="img">
+              <img src="./img/google.png" alt="google.png">
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="https://kz.linkedin.com/" class="img">
+              <img src="./img/linkedin.png" alt="linkedin.png">
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="https://www.businessinsider.com/" class="img">
+              <img src="./img/business-insider.png" alt="business-insider.png">
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="https://www.samsung.com" class="img">
+              <img src="./img/samsung.png" alt="samsung.png">
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="https://www.careem.com" class="img">
+              <img src="./img/careem.png" alt="careem.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mask-group end -->
+    <!-- Features start -->
+    <div class="features">
+      <div class="container">
+        <div class="row justify-lg-content-unset justify-content-center">
+          <div class="features__text">
+            <h3 class="articl-text">Features</h3>
+            <p>You can explore the features that we provide with fun and have their own functions each feature.</p>
+          </div>
+          <div class="col-lg-4 col-sd-5 ">
+            <div class="features-card">
+              <div class="features-card__icon">
+                <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M26.3864 19.6364H25.1591V4.29545C25.1591 3.95654 24.8843 3.68182 24.5455 3.68182H15.3409V0.613636C15.3409 0.274725 15.0661 0 14.7273 0H12.2727C11.9339 0 11.6591 0.274725 11.6591 0.613636V3.68182H2.45455C2.1157 3.68182 1.84091 3.95654 1.84091 4.29545V19.6364H0.613636C0.274786 19.6364 0 19.9111 0 20.25V22.7045C0 23.0435 0.274786 23.3182 0.613636 23.3182H7.63793L4.3505 30.5506C4.26416 30.7405 4.28024 30.9613 4.39315 31.1368C4.50612 31.3121 4.70045 31.4182 4.90909 31.4182H7.97727C8.21794 31.4182 8.43633 31.2775 8.53593 31.0585L10.1017 27.6136H16.8983L18.4641 31.0585C18.5636 31.2775 18.7821 31.4182 19.0227 31.4182H22.0909C22.2995 31.4182 22.4939 31.3121 22.6069 31.1368C22.7198 30.9613 22.7359 30.7405 22.6495 30.5506L19.3621 23.3182H26.3864C26.7252 23.3182 27 23.0435 27 22.7045V20.25C27 19.9111 26.7252 19.6364 26.3864 19.6364ZM12.8864 1.22727H14.1136V3.68182H12.8864V1.22727ZM3.06818 4.90909H23.9318V19.6364H11.6591V17.7955C11.6591 17.4565 11.3843 17.1818 11.0455 17.1818H6.13636C5.79751 17.1818 5.52273 17.4565 5.52273 17.7955V19.6364H3.06818V4.90909ZM6.75 19.6364V18.4091H10.4318V19.6364H6.75ZM7.58215 30.1909H5.86213L8.98609 23.3182H10.7062L7.58215 30.1909ZM10.6596 26.3864L12.0542 23.3182H14.9458L16.3404 26.3864H10.6596ZM21.1379 30.1909H19.4179L16.2939 23.3182H18.014L21.1379 30.1909ZM25.7727 22.0909H1.22727V20.8636H25.7727V22.0909Z"
+                    fill="white" />
+                  <path
+                    d="M6.07151 15.0017L6.51554 14.1136H9.43884L9.88287 15.0017C9.99038 15.2167 10.2071 15.341 10.4322 15.341C10.5244 15.341 10.6181 15.3202 10.7061 15.2761C11.0093 15.1245 11.1321 14.7559 10.9806 14.4528L8.52606 9.5437C8.42211 9.33586 8.20967 9.20455 7.97722 9.20455C7.74478 9.20455 7.53234 9.33586 7.42838 9.54376L4.97384 14.4529C4.82227 14.756 4.94512 15.1246 5.24832 15.2762C5.55127 15.4276 5.92 15.3048 6.07151 15.0017ZM7.97722 11.1903L8.82527 12.8864H7.12918L7.97722 11.1903Z"
+                    fill="white" />
+                  <path
+                    d="M12.8864 15.3409H14.7273C15.7423 15.3409 16.5682 14.5151 16.5682 13.5C16.5682 13.029 16.3903 12.5987 16.0983 12.2727C16.3903 11.9468 16.5682 11.5165 16.5682 11.0455C16.5682 10.0304 15.7423 9.20455 14.7273 9.20455H12.8864C12.5475 9.20455 12.2727 9.47927 12.2727 9.81818V14.7273C12.2727 15.0662 12.5475 15.3409 12.8864 15.3409ZM13.5 10.4318H14.7273C15.0656 10.4318 15.3409 10.7071 15.3409 11.0455C15.3409 11.3838 15.0656 11.6591 14.7273 11.6591H13.5V10.4318ZM13.5 12.8864H14.7273C15.0656 12.8864 15.3409 13.1616 15.3409 13.5C15.3409 13.8384 15.0656 14.1136 14.7273 14.1136H13.5V12.8864Z"
+                    fill="white" />
+                  <path
+                    d="M20.8636 15.3409H21.4773C21.8161 15.3409 22.0909 15.0662 22.0909 14.7273C22.0909 14.3884 21.8161 14.1136 21.4773 14.1136H20.8636C19.8486 14.1136 19.0227 13.2878 19.0227 12.2727C19.0227 11.2576 19.8486 10.4318 20.8636 10.4318H21.4773C21.8161 10.4318 22.0909 10.1571 22.0909 9.81818C22.0909 9.47927 21.8161 9.20455 21.4773 9.20455H20.8636C19.1718 9.20455 17.7955 10.5809 17.7955 12.2727C17.7955 13.9645 19.1718 15.3409 20.8636 15.3409Z"
+                    fill="white" />
+                </svg>
+
+              </div>
+              <div class="features-card__bg">
+                <img src="./img/features-card__bg.png" alt="">
+              </div>
+              <div class="features-card__text">
+                <h4>HQ Curriculum</h4>
+                <p>We provide a curriculum formed by a team of onedy experts who is proven to shape students better</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sd-5 ">
+            <div class="features-card">
+              <div class="features-card__icon">
+                <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M5.40779 -0.000488281C3.1745 -1.36858e-05 1.35791 1.81658 1.35791 4.04987C1.35791 6.28316 3.1745 8.09933 5.40779 8.09933C7.64108 8.09933 9.45767 6.28273 9.45767 4.04945C9.45767 1.81611 7.64108 -0.000488281 5.40779 -0.000488281ZM5.40779 6.74979C3.91656 6.74979 2.70787 5.5411 2.70787 4.04987C2.70787 2.55864 3.91656 1.34995 5.40779 1.34995C6.89902 1.34995 8.10771 2.55864 8.10771 4.04987C8.10771 5.5411 6.89908 6.74979 5.40779 6.74979Z"
+                      fill="white" />
+                    <path
+                      d="M25.6552 6.74951H12.1556C11.41 6.74951 10.8057 7.35383 10.8057 8.09947V9.1304L12.1556 9.80538V8.09947H25.6552V18.8987H12.1556V17.294L10.8057 16.957V18.8987C10.8057 19.6443 11.41 20.2486 12.1556 20.2486H17.7139L14.2769 25.9765C14.0843 26.2956 14.1886 26.7109 14.509 26.9022C14.8254 27.0961 15.2421 26.9917 15.4347 26.67L18.2305 22.0099V26.3231C18.2305 26.6961 18.5324 26.998 18.9054 26.998C19.2785 26.998 19.5804 26.6961 19.5804 26.3231V22.0099L22.3766 26.6696C22.5031 26.8806 22.7271 26.9976 22.9553 26.9976C23.0741 26.9976 23.1938 26.9674 23.3022 26.9013C23.6227 26.7101 23.7266 26.2947 23.5344 25.9757L20.0974 20.2478H25.6552C26.4008 20.2478 27.0051 19.6435 27.0051 18.8978V8.09947C27.0052 7.35383 26.4009 6.74951 25.6552 6.74951Z"
+                      fill="white" />
+                    <path
+                      d="M23.6038 10.6133C23.5021 10.2547 23.1291 10.0436 22.7695 10.1507L14.4398 12.5307C14.3426 12.4367 14.2337 12.3543 14.1095 12.2918L8.70968 9.59186C8.52206 9.49826 8.3155 9.44922 8.10579 9.44922H2.70594C2.05348 9.44922 1.49456 9.91585 1.3776 10.5576L0.0276419 17.9819C-0.0439165 18.3756 0.062762 18.781 0.319255 19.0884C0.575747 19.3957 0.955529 19.5734 1.35603 19.5734H2.21864L2.71048 25.7549C2.76627 26.4569 3.35171 26.9978 4.05596 26.9978H6.75588C7.44388 26.9978 8.02168 26.4807 8.09772 25.7972L9.27714 15.1833L13.1785 16.1585C13.2865 16.1855 13.3963 16.1985 13.5057 16.1985C13.8036 16.1985 14.0965 16.0999 14.3364 15.9127C14.664 15.6571 14.8556 15.2643 14.8556 14.8485V13.8149L23.1412 11.4475C23.4999 11.3459 23.7068 10.9715 23.6038 10.6133ZM13.5056 14.849L8.10579 13.499L6.75583 25.6483H4.0559L3.46551 18.2235H1.35598L2.70594 10.7992H4.73088V14.9057C4.73088 15.2788 5.03283 15.5807 5.40586 15.5807C5.7789 15.5807 6.08084 15.2788 6.08084 14.9057V10.7991H8.10579L13.5056 13.499V14.849Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="27" height="27" fill="white" transform="translate(0.00537109 -0.000488281)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+              </div>
+              <div class="features-card__bg">
+                <img src="./img/features-card__bg.png" alt="">
+              </div>
+              <div class="features-card__text">
+                <h4>HQ Curriculum</h4>
+                <p>We provide a curriculum formed by a team of onedy experts who is proven to shape students better</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sd-5 ">
+            <div class="features-card">
+              <div class="features-card__icon">
+                <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.4202 6.02033L15.5896 0.521637C15.2336 0.185871 14.7603 0.000976562 14.2569 0.000976562H2.85678C1.81761 0.000976562 0.972168 0.798293 0.972168 1.77832V24.2236C0.972168 25.2037 1.81761 26.001 2.85678 26.001H20.0876C21.1267 26.001 21.9722 25.2037 21.9722 24.2236V7.27712C21.9722 6.80246 21.7762 6.35615 21.4202 6.02033ZM19.2145 6.09473H15.7799C15.6314 6.09473 15.5106 5.98082 15.5106 5.84082V2.60169L19.2145 6.09473ZM20.0876 24.4775H2.85678C2.70833 24.4775 2.58755 24.3636 2.58755 24.2236V1.77832C2.58755 1.63832 2.70833 1.52441 2.85678 1.52441H13.8952V5.84082C13.8952 6.82085 14.7407 7.61816 15.7799 7.61816H20.3568V24.2236C20.3568 24.3636 20.236 24.4775 20.0876 24.4775Z"
+                    fill="white" />
+                  <path
+                    d="M12.3391 11.6299H17.4852C17.9313 11.6299 18.2929 11.2888 18.2929 10.8682C18.2929 10.4475 17.9313 10.1064 17.4852 10.1064H12.3391C11.893 10.1064 11.5314 10.4475 11.5314 10.8682C11.5314 11.2888 11.893 11.6299 12.3391 11.6299Z"
+                    fill="white" />
+                  <path
+                    d="M12.3391 16.708H17.4852C17.9313 16.708 18.2929 16.367 18.2929 15.9463C18.2929 15.5256 17.9313 15.1846 17.4852 15.1846H12.3391C11.893 15.1846 11.5314 15.5256 11.5314 15.9463C11.5314 16.367 11.893 16.708 12.3391 16.708Z"
+                    fill="white" />
+                  <path
+                    d="M17.5083 20.2627H12.3391C11.893 20.2627 11.5314 20.6037 11.5314 21.0244C11.5314 21.4451 11.893 21.7861 12.3391 21.7861H17.5083C17.9544 21.7861 18.316 21.4451 18.316 21.0244C18.316 20.6037 17.9544 20.2627 17.5083 20.2627Z"
+                    fill="white" />
+                  <path
+                    d="M8.30903 8.79412L6.44638 10.5507L6.00716 10.1365C5.69178 9.83899 5.18035 9.83899 4.86492 10.1365C4.54949 10.4339 4.54949 10.9162 4.86492 11.2137L5.87529 12.1665C6.03301 12.3153 6.23972 12.3897 6.44638 12.3897C6.65305 12.3897 6.85982 12.3153 7.01748 12.1665L9.45122 9.87134C9.76665 9.57386 9.76665 9.0916 9.45122 8.79412C9.13584 8.49664 8.62441 8.49664 8.30903 8.79412Z"
+                    fill="white" />
+                  <path
+                    d="M8.30903 14.26L6.44638 16.0167L6.00716 15.6024C5.69178 15.305 5.18035 15.305 4.86492 15.6024C4.54949 15.8999 4.54949 16.3822 4.86492 16.6797L5.87529 17.6325C6.03301 17.7812 6.23972 17.8555 6.44638 17.8555C6.65305 17.8555 6.85982 17.7812 7.01748 17.6324L9.45122 15.3372C9.76665 15.0397 9.76665 14.5575 9.45122 14.26C9.13584 13.9626 8.62441 13.9626 8.30903 14.26Z"
+                    fill="white" />
+                  <path
+                    d="M8.30903 19.3382L6.44638 21.0948L6.00716 20.6806C5.69178 20.3831 5.18035 20.3831 4.86492 20.6806C4.54949 20.978 4.54949 21.4603 4.86492 21.7578L5.87529 22.7106C6.03301 22.8593 6.23972 22.9337 6.44638 22.9337C6.65305 22.9337 6.85982 22.8593 7.01748 22.7105L9.45122 20.4153C9.76665 20.1179 9.76665 19.6356 9.45122 19.3381C9.13584 19.0407 8.62441 19.0407 8.30903 19.3382Z"
+                    fill="white" />
+                </svg>
+
+              </div>
+              <div class="features-card__bg">
+                <img src="./img/features-card__bg.png" alt="">
+              </div>
+              <div class="features-card__text">
+                <h4>HQ Curriculum</h4>
+                <p>We provide a curriculum formed by a team of onedy experts who is proven to shape students better</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Features end -->
+    <!-- our-class start -->
+    <div class="our-class" id="class">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="our-class__text">
+            <h3 class="articl-text">Our Populer Class</h3>
+            <p>You can explore the courses we provide with fun and full of new knowledge.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9 col-11">
+            <section class="our-class-card">
+              <div class="img">
+                <img src="./img/our-class_card_img_01.png" alt="UI/UX Case Studies Portfolio Masterclass">
+                <div class="img__favorit">
+                  <button type="button" class="btn"><svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.17159 2.20102C1.80015 2.58179 1.50551 3.03382 1.30449 3.53132C1.10346 4.02882 1 4.56203 1 5.10052C1 5.63901 1.10346 6.17222 1.30449 6.66972C1.50551 7.16722 1.80015 7.61925 2.17159 8.00002L9.00001 15L15.8284 8.00002C16.5786 7.23102 17 6.18804 17 5.10052C17 4.013 16.5786 2.97002 15.8284 2.20102C15.0783 1.43203 14.0609 1.00001 13 1.00001C11.9391 1.00001 10.9217 1.43203 10.1716 2.20102L9.00001 3.40201L7.82845 2.20102C7.45702 1.82025 7.01606 1.51821 6.53076 1.31214C6.04546 1.10606 5.52531 1 5.00002 1C4.47473 1 3.95458 1.10606 3.46928 1.31214C2.98398 1.51821 2.54302 1.82025 2.17159 2.20102V2.20102Z"
+                        stroke="#666666" stroke-width="1.45869" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <span>UI/UX</span>
+                </div>
+              </div>
+              <div class="our-class-card__body">
+                <div class="rating">
+                  <button class="btn"> <i class="fa fa-star"></i> 5.0 (1204)</button>
+                  <button class="btn"><i class="fa fa-fire" aria-hidden="true"></i></button>
+                </div>
+                <h5 class="masterclass">
+                  UI/UX Case Studies Portfolio Masterclass
+                </h5>
+                <p>Teacher - Nathalie Rohman</p>
+                <div class="students">
+                  <span><i class="fa fa-users" aria-hidden="true"></i> 2029 Students</span>
+                  <a href="#!">Go Join!</a>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9 col-11">
+            <section class="our-class-card">
+              <div class="img">
+                <img src="./img/our-class_card_img_02.png" alt="Procreate: Simple Steps to Create Awesome Animations">
+                <div class="img__favorit">
+                  <button type="button" class="btn"><svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.17159 2.20102C1.80015 2.58179 1.50551 3.03382 1.30449 3.53132C1.10346 4.02882 1 4.56203 1 5.10052C1 5.63901 1.10346 6.17222 1.30449 6.66972C1.50551 7.16722 1.80015 7.61925 2.17159 8.00002L9.00001 15L15.8284 8.00002C16.5786 7.23102 17 6.18804 17 5.10052C17 4.013 16.5786 2.97002 15.8284 2.20102C15.0783 1.43203 14.0609 1.00001 13 1.00001C11.9391 1.00001 10.9217 1.43203 10.1716 2.20102L9.00001 3.40201L7.82845 2.20102C7.45702 1.82025 7.01606 1.51821 6.53076 1.31214C6.04546 1.10606 5.52531 1 5.00002 1C4.47473 1 3.95458 1.10606 3.46928 1.31214C2.98398 1.51821 2.54302 1.82025 2.17159 2.20102V2.20102Z"
+                        stroke="#666666" stroke-width="1.45869" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <span>Illustration</span>
+                </div>
+              </div>
+              <div class="our-class-card__body">
+                <div class="rating">
+                  <button class="btn"> <i class="fa fa-star"></i>5.0 (553)</button>
+                  <button class="btn"><i class="fa fa-fire" aria-hidden="true"></i></button>
+                </div>
+                <h5 class="masterclass">
+                  Procreate: Simple Steps to Create Awesome Animations
+                </h5>
+                <p>Teacher - Abraham Mabar</p>
+                <div class="students">
+                  <span><i class="fa fa-users" aria-hidden="true"></i>314 Students</span>
+                  <a href="#!">Go Join!</a>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-9 col-11">
+            <section class="our-class-card">
+              <div class="img">
+                <img src="./img/our-class_card_img_03.png" alt="Prepare for Your Shoot Without Breaking the Bank">
+                <div class="img__favorit">
+                  <button type="button" class="btn"><svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.17159 2.20102C1.80015 2.58179 1.50551 3.03382 1.30449 3.53132C1.10346 4.02882 1 4.56203 1 5.10052C1 5.63901 1.10346 6.17222 1.30449 6.66972C1.50551 7.16722 1.80015 7.61925 2.17159 8.00002L9.00001 15L15.8284 8.00002C16.5786 7.23102 17 6.18804 17 5.10052C17 4.013 16.5786 2.97002 15.8284 2.20102C15.0783 1.43203 14.0609 1.00001 13 1.00001C11.9391 1.00001 10.9217 1.43203 10.1716 2.20102L9.00001 3.40201L7.82845 2.20102C7.45702 1.82025 7.01606 1.51821 6.53076 1.31214C6.04546 1.10606 5.52531 1 5.00002 1C4.47473 1 3.95458 1.10606 3.46928 1.31214C2.98398 1.51821 2.54302 1.82025 2.17159 2.20102V2.20102Z"
+                        stroke="#666666" stroke-width="1.45869" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <span>Photography</span>
+                </div>
+              </div>
+              <div class="our-class-card__body">
+                <div class="rating">
+                  <button class="btn"> <i class="fa fa-star"></i> 5.0 (215)</button>
+                  <button class="btn"><i class="fa fa-fire" aria-hidden="true"></i></button>
+                </div>
+                <h5 class="masterclass">
+                  Prepare for Your Shoot Without Breaking the Bank
+                </h5>
+                <p>Teacher - Felix Junaedi</p>
+                <div class="students">
+                  <span><i class="fa fa-users" aria-hidden="true"></i> 234 Students</span>
+                  <a href="#!">Go Join!</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- our-class end -->
+  </section>
+  <!-- section-01 end -->
+
+  <!-- section-02 start -->
+  <section class="section-02">
+    <!-- about start -->
+    <div class="about" id="about">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="global__text">
+            <h3 class="articl-text">What Do We Provide</h3>
+            <p>Shape your future with passion</p>
+          </div>
+          <div class="col-lg-6 col-sm-10 col-11">
+            <div class="about__video">
+              <iframe src="https://www.youtube.com/embed/tZrpoSUQCJ0" title="YouTube video player" frameborder="0"
+                allowfullscreen></iframe>
+              <div class="logo">
+                <svg width="96" height="26" viewBox="0 0 96 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M44.7339 6.45947C40.6714 6.45947 38.1323 9.26221 38.1323 13.7446C38.1323 18.2271 40.6714 21.02 44.7339 21.02C48.7866 21.02 51.3354 18.2271 51.3354 13.7446C51.3354 9.26221 48.7866 6.45947 44.7339 6.45947ZM44.7339 8.3833C47.4097 8.3833 49.0894 10.4536 49.0894 13.7446C49.0894 17.0259 47.4097 19.0962 44.7339 19.0962C42.0581 19.0962 40.3687 17.0259 40.3687 13.7446C40.3687 10.4536 42.0581 8.3833 44.7339 8.3833ZM53.1714 20.7856H55.2808V14.7993C55.2808 13.2075 56.2378 12.1528 57.7222 12.1528C59.187 12.1528 59.9097 13.0024 59.9097 14.5454V20.7856H62.0288V14.1353C62.0288 11.7817 60.73 10.3364 58.4644 10.3364C56.8823 10.3364 55.7886 11.0591 55.2319 12.231H55.1831V10.5122H53.1714V20.7856ZM70.8765 17.7681C70.5933 18.6665 69.7046 19.272 68.5034 19.272C66.814 19.272 65.7397 18.0903 65.7397 16.3032V16.1763H72.9956V15.4536C72.9956 12.3384 71.2183 10.3267 68.3667 10.3267C65.4663 10.3267 63.6108 12.4751 63.6108 15.6978C63.6108 18.9399 65.437 20.981 68.4546 20.981C70.8081 20.981 72.5854 19.6431 72.8784 17.7681H70.8765ZM68.3667 12.0259C69.8413 12.0259 70.8374 13.1294 70.8862 14.7017H65.7495C65.8569 13.1489 66.8921 12.0259 68.3667 12.0259ZM78.4937 20.9614C79.9878 20.9614 81.1597 20.2095 81.7651 19.0376H81.8042V20.7856H83.855V6.69385H81.7358V12.2212H81.6968C81.1206 11.0884 79.9487 10.3462 78.4741 10.3462C75.896 10.3462 74.1772 12.4067 74.1772 15.6489C74.1772 18.8911 75.896 20.9614 78.4937 20.9614ZM79.0503 12.1235C80.6714 12.1235 81.7554 13.52 81.7554 15.6489C81.7554 17.7974 80.6714 19.1743 79.0503 19.1743C77.3804 19.1743 76.3354 17.8169 76.3354 15.6489C76.3354 13.4907 77.3804 12.1235 79.0503 12.1235ZM87.0483 24.6138C89.1772 24.6138 90.1929 23.813 91.0718 21.3228L94.9194 10.5122H92.6929L90.0952 18.8716H90.0562L87.4585 10.5122H85.1733L88.8843 20.7954C88.8843 20.8052 88.6987 21.4106 88.6987 21.4302C88.3765 22.4849 87.8491 22.895 86.8726 22.895C86.6968 22.895 86.3452 22.895 86.189 22.856V24.5649C86.3452 24.5942 86.8726 24.6138 87.0483 24.6138Z"
+                    fill="#04004D" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.7732 16.0413C16.1377 20.1197 21.3745 21.5171 25.47 19.1624L26.2378 20.4868C21.4079 23.2638 15.2319 21.6158 12.4433 16.8059L13.7732 16.0413Z"
+                    fill="#FF5722" />
+                  <path
+                    d="M28.525 20.3285C28.525 22.198 27.0031 23.7136 25.1258 23.7136C23.2484 23.7136 21.7266 22.198 21.7266 20.3285C21.7266 18.4589 23.2484 16.9434 25.1258 16.9434C27.0031 16.9434 28.525 18.4589 28.525 20.3285Z"
+                    fill="#FF5722" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.311523 11.5275C0.311523 5.24954 5.35892 0.145572 11.6329 0.0205078C10.7971 1.64201 10.2258 3.41572 9.97433 5.28767C7.15833 5.99887 5.07042 8.5983 5.07042 11.6961C5.07042 15.3417 7.96198 18.2971 11.5289 18.2971C12.0124 18.2971 12.4836 18.2428 12.9368 18.1398C14.0059 19.7805 15.4963 21.0042 17.1827 21.7508C15.5918 22.5726 13.7847 23.0368 11.8688 23.0368C5.48589 23.0368 0.311523 17.8839 0.311523 11.5275ZM18.297 21.0938C21.3901 19.0284 23.426 15.5147 23.426 11.5275C23.426 6.59756 20.3135 2.39157 15.9386 0.752069C14.9964 2.20442 14.351 3.85829 14.0854 5.63251C16.3807 6.64479 17.9874 8.9787 17.9874 11.6961C17.9874 14.4659 16.3183 16.8372 13.9521 17.8168C15.0474 19.3866 16.5848 20.5027 18.297 21.0938Z"
+                    fill="#FF5722" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-10 col-11">
+            <div class="about__text">
+              <h3>“We help people to reach their dreams”</h3>
+              <p>We provide young people with development and networking opportunities in their mediation practice. We
+                also support peer mediation services in schools and organisations and promote the sustainability of peer
+                mediation programmes.</p>
+              <a href="#!">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about end -->
+    <!-- student_say start -->
+    <div class="student-say">
+      <div class="container">
+        <div class="row">
+          <div class="global__text">
+            <h3 class="articl-text">What Do We Provide</h3>
+            <p>Shape your future with passion</p>
+          </div>
+          <div class="owl-carousel owl-theme" id='owl-carousel'>
+            <div class="item">
+              <div class="item__img">
+                <img src="./img/student-img_01.png" alt="">
+              </div>
+              <div class="item__name">
+                <h5>Viezh Robert</h5>
+                <p>Photographer</p>
+                <span>5.0 <i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+              <p>“I like it because I like to study so much and still can connect with high speed.”</p>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="./img/student-img_02.png" alt="">
+              </div>
+              <div class="item__name">
+                <h5>Viezh Robert</h5>
+                <p>UI/UX Designer</p>
+                <span>5.0 <i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+              <p>“I like it because I like to study so much and still can connect with high speed.”</p>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="./img/student-img_03.png" alt="">
+              </div>
+              <div class="item__name">
+                <h5>Viezh Robert</h5>
+                <p>Web Developer</p>
+                <span>5.0 <i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+              <p>“I like it because I like to study so much and still can connect with high speed.”</p>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="./img/student-img_04.png" alt="">
+              </div>
+              <div class="item__name">
+                <h5>Viezh Robert</h5>
+                <p>Photographer</p>
+                <span>5.0 <i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+              <p>“I like it because I like to study so much and still can connect with high speed.”</p>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="./img/student-img_01.png" alt="">
+              </div>
+              <div class="item__name">
+                <h5>Viezh Robert</h5>
+                <p>Photographer</p>
+                <span>5.0 <i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+              <p>“I like it because I like to study so much and still can connect with high speed.”</p>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="./img/student-img_02.png" alt="">
+              </div>
+              <div class="item__name">
+                <h5>Viezh Robert</h5>
+                <p>Photographer</p>
+                <span>5.0 <i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+              <p>“I like it because I like to study so much and still can connect with high speed.”</p>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="./img/student-img_03.png" alt="">
+              </div>
+              <div class="item__name">
+                <h5>Viezh Robert</h5>
+                <p>Photographer</p>
+                <span>5.0 <i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+              <p>“I like it because I like to study so much and still can connect with high speed.”</p>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="./img/student-img_04.png" alt="">
+              </div>
+              <div class="item__name">
+                <h5>Viezh Robert</h5>
+                <p>Photographer</p>
+                <span>5.0 <i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+              <p>“I like it because I like to study so much and still can connect with high speed.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- student_say end -->
+  </section>
+  <!-- section-02 end -->
+  <!-- section-03 start -->
+  <section class="section-03">
+    <!-- Pricing start -->
+    <div class="pricing" id="pricing">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="global__text">
+            <h3 class="articl-text">Subscription Fee</h3>
+            <p>No contracts. No surprise fees.</p>
+            <div class="date">
+              <button class="btn active">Montly</button>
+              <button class="btn">Yearly</button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-10 col-11">
+            <div class="pricing__column">
+              <div class="pricing__column-top">
+                <h3>0$<span>/ Month</span></h3>
+                <span>Free Member</span>
+                <p>For most businesses that want to otpimize web queries</p>
+              </div>
+              <div class="pricing__column-bottom">
+                <div class="active"><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p>Free course</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p><del> Full HD video</del></p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p><del> E-Certificate</del></p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p><del> Subtittle video</del></p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p><del>Chat Support</del></p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p><del>Study report</del></p>
+                </div>
+              </div>
+              <button class="btn">Choose plan</button>
+              <div class="img">
+                <img src="./img/Mask_img.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-10 col-11">
+            <div class="pricing__column">
+              <div class="pricing__column-top">
+                <h3>12$<span>/ Month</span></h3>
+                <span>Exclusive Member</span>
+                <p>For most businesses that want to otpimize web queries</p>
+              </div>
+              <div class="pricing__column-bottom">
+                <div class="active"><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p>Premium course</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> Full HD video</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> E-Certificate</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> Subtittle video</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> Chat Support</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> Study report </p>
+                </div>
+              </div>
+              <button class="btn">Choose plan</button>
+              <div class="img">
+                <img src="./img/Mask_img.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-10 col-11">
+            <div class="pricing__column">
+              <div class="pricing__column-top">
+                <h3>24$<span>/ Month</span></h3>
+                <span>Premium Member</span>
+                <p>For most businesses that want to otpimize web queries</p>
+              </div>
+              <div class="pricing__column-bottom">
+                <div class="active"><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p>Exclusive course</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> Full HD video</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> E-Certificate</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> Subtittle video</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> Chat Support</p>
+                </div>
+                <div><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                  <p> Study report </p>
+                </div>
+              </div>
+              <button class="btn">Choose plan</button>
+              <div class="img">
+                <img src="./img/Mask_img.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pricing end -->
+    <!-- Blogs start -->
+    <div class="blogs" id="blogs">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="global__text">
+            <h3 class="articl-text">Explore Our Blogs</h3>
+            <div class="some-info">
+              <p>These are articles written by teachers from Onedy that will help you in learning, living life, and
+                self-awareness</p>
+              <a href="#">See All News <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+
+          </div>
+          <div class="owl-carousel">
+            <div class="card item">
+              <div class="card-left">
+                <img src="./img/blogs_img_01.png" alt="img">
+              </div>
+              <div class="card-right">
+                <div class="card-right__date">
+                  <span>SELF-IMPROVEMENT</span><span>3 days ago</span>
+                </div>
+                <h4>What 10 things have you stopped doing in your life?</h4>
+                <p>What 10 things have you stopped doing in your life? Our brains aren’t designed to process all the
+                  news...</p>
+                <div class="card-right__reading">
+                  <div class="avatar">
+                    <div class="img">
+                      <img src="./img/Avatar_01.png" alt="Alexis Megami">
+                    </div>
+                    <span>Alexis Megami</span>
+                  </div>
+                  <a href="#!">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="card item">
+              <div class="card-left">
+                <img src="./img/blogs_img_02.png" alt="img">
+              </div>
+              <div class="card-right">
+                <div class="card-right__date">
+                  <span>PRODUCTIVITY</span><span>3 days ago</span>
+                </div>
+                <h4>What is the most useful life hack in studying?</h4>
+                <p>We hear it around us all the time. Elon Musk works 14 hours per day. Marissa Mayer works 130 hours
+                  per...</p>
+                <div class="card-right__reading">
+                  <div class="avatar">
+                    <div class="img">
+                      <img src="./img/Avatar_02.png" alt="Alexis Megami">
+                    </div>
+                    <span>Alexis Megami</span>
+                  </div>
+                  <a href="#!">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="card item">
+              <div class="card-left">
+                <img src="./img/blogs_img_01.png" alt="img">
+              </div>
+              <div class="card-right">
+                <div class="card-right__date">
+                  <span>SELF-IMPROVEMENT</span><span>3 days ago</span>
+                </div>
+                <h4>What 10 things have you stopped doing in your life?</h4>
+                <p>What 10 things have you stopped doing in your life? Our brains aren’t designed to process all the
+                  news...</p>
+                <div class="card-right__reading">
+                  <div class="avatar">
+                    <div class="img">
+                      <img src="./img/Avatar_01.png" alt="Alexis Megami">
+                    </div>
+                    <span>Alexis Megami</span>
+                  </div>
+                  <a href="#!">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="card item">
+              <div class="card-left">
+                <img src="./img/blogs_img_02.png" alt="img">
+              </div>
+              <div class="card-right">
+                <div class="card-right__date">
+                  <span>PRODUCTIVITY</span><span>3 days ago</span>
+                </div>
+                <h4>What is the most useful life hack in studying?</h4>
+                <p>We hear it around us all the time. Elon Musk works 14 hours per day. Marissa Mayer works 130 hours
+                  per...</p>
+                <div class="card-right__reading">
+                  <div class="avatar">
+                    <div class="img">
+                      <img src="./img/Avatar_02.png" alt="Alexis Megami">
+                    </div>
+                    <span>Alexis Megami</span>
+                  </div>
+                  <a href="#!">Read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Blogs end -->
+  </section>
+  <!-- section-03 end -->
+  <!-- section-04 start -->
+  <section class="section-04">
+    <!-- map  -->
+    <div class="map">
+      <div class="container">
+        <div class="row">
+          <div class="global__text">
+            <h3 class="articl-text">let's join together with the others</h3>
+            <p>More than 2+ million people from 73 countries around the world have joined us.</p>
+          </div>
+          <div class="col-12">
+            <div class="map-section">
+              <img src="./img/map-global.png" alt="map">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- map / -->
+    <!-- Instructor -->
+    <div class="instructor">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="instructor-block">
+              <div class="global__text">
+                <h3 class="articl-text">Do You Want To Be an Instructor?</h3>
+                <p>Join us to build a better students</p>
+                <div class="register">
+                  <button class="btn">Join with Us</button>
+                  <button class="btn">FAQ</button>
+                </div>
+              </div>
+              <div class="instructor-block-bg">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Instructor / -->
+  </section>
+  <!-- section-04 end -->
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-4 col-10">
+          <div class="footer-left">
+            <a href="#!" class="logo"><svg width="96" height="26" viewBox="0 0 96 26" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M44.7339 6.45947C40.6714 6.45947 38.1323 9.26221 38.1323 13.7446C38.1323 18.2271 40.6714 21.02 44.7339 21.02C48.7866 21.02 51.3354 18.2271 51.3354 13.7446C51.3354 9.26221 48.7866 6.45947 44.7339 6.45947ZM44.7339 8.3833C47.4097 8.3833 49.0894 10.4536 49.0894 13.7446C49.0894 17.0259 47.4097 19.0962 44.7339 19.0962C42.0581 19.0962 40.3687 17.0259 40.3687 13.7446C40.3687 10.4536 42.0581 8.3833 44.7339 8.3833ZM53.1714 20.7856H55.2808V14.7993C55.2808 13.2075 56.2378 12.1528 57.7222 12.1528C59.187 12.1528 59.9097 13.0024 59.9097 14.5454V20.7856H62.0288V14.1353C62.0288 11.7817 60.73 10.3364 58.4644 10.3364C56.8823 10.3364 55.7886 11.0591 55.2319 12.231H55.1831V10.5122H53.1714V20.7856ZM70.8765 17.7681C70.5933 18.6665 69.7046 19.272 68.5034 19.272C66.814 19.272 65.7397 18.0903 65.7397 16.3032V16.1763H72.9956V15.4536C72.9956 12.3384 71.2183 10.3267 68.3667 10.3267C65.4663 10.3267 63.6108 12.4751 63.6108 15.6978C63.6108 18.9399 65.437 20.981 68.4546 20.981C70.8081 20.981 72.5854 19.6431 72.8784 17.7681H70.8765ZM68.3667 12.0259C69.8413 12.0259 70.8374 13.1294 70.8862 14.7017H65.7495C65.8569 13.1489 66.8921 12.0259 68.3667 12.0259ZM78.4937 20.9614C79.9878 20.9614 81.1597 20.2095 81.7651 19.0376H81.8042V20.7856H83.855V6.69385H81.7358V12.2212H81.6968C81.1206 11.0884 79.9487 10.3462 78.4741 10.3462C75.896 10.3462 74.1772 12.4067 74.1772 15.6489C74.1772 18.8911 75.896 20.9614 78.4937 20.9614ZM79.0503 12.1235C80.6714 12.1235 81.7554 13.52 81.7554 15.6489C81.7554 17.7974 80.6714 19.1743 79.0503 19.1743C77.3804 19.1743 76.3354 17.8169 76.3354 15.6489C76.3354 13.4907 77.3804 12.1235 79.0503 12.1235ZM87.0483 24.6138C89.1772 24.6138 90.1929 23.813 91.0718 21.3228L94.9194 10.5122H92.6929L90.0952 18.8716H90.0562L87.4585 10.5122H85.1733L88.8843 20.7954C88.8843 20.8052 88.6987 21.4106 88.6987 21.4302C88.3765 22.4849 87.8491 22.895 86.8726 22.895C86.6968 22.895 86.3452 22.895 86.189 22.856V24.5649C86.3452 24.5942 86.8726 24.6138 87.0483 24.6138Z"
+                  fill="#04004D" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.7732 16.0413C16.1377 20.1197 21.3745 21.5171 25.47 19.1624L26.2378 20.4868C21.4079 23.2638 15.2319 21.6158 12.4433 16.8059L13.7732 16.0413Z"
+                  fill="#FF5722" />
+                <path
+                  d="M28.525 20.3285C28.525 22.198 27.0031 23.7136 25.1258 23.7136C23.2484 23.7136 21.7266 22.198 21.7266 20.3285C21.7266 18.4589 23.2484 16.9434 25.1258 16.9434C27.0031 16.9434 28.525 18.4589 28.525 20.3285Z"
+                  fill="#FF5722" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.311523 11.5275C0.311523 5.24954 5.35892 0.145572 11.6329 0.0205078C10.7971 1.64201 10.2258 3.41572 9.97433 5.28767C7.15833 5.99887 5.07042 8.5983 5.07042 11.6961C5.07042 15.3417 7.96198 18.2971 11.5289 18.2971C12.0124 18.2971 12.4836 18.2428 12.9368 18.1398C14.0059 19.7805 15.4963 21.0042 17.1827 21.7508C15.5918 22.5726 13.7847 23.0368 11.8688 23.0368C5.48589 23.0368 0.311523 17.8839 0.311523 11.5275ZM18.297 21.0938C21.3901 19.0284 23.426 15.5147 23.426 11.5275C23.426 6.59756 20.3135 2.39157 15.9386 0.752069C14.9964 2.20442 14.351 3.85829 14.0854 5.63251C16.3807 6.64479 17.9874 8.9787 17.9874 11.6961C17.9874 14.4659 16.3183 16.8372 13.9521 17.8168C15.0474 19.3866 16.5848 20.5027 18.297 21.0938Z"
+                  fill="#FF5722" />
+              </svg>
+            </a>
+            <p><span>Onedy</span> is an online learning school that will help people acquire new skills.</p>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i> Jl. Pemuda Tersesat No. 296, Jakarta Timur Indonesia
+            </p>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i> hello@onedy.com</p>
+            <div class="icons">
+              <a href="!#"><i class="fab fa-facebook-f"></i></a>
+              <a href="!#"><i class="fab fa-instagram"></i></a>
+              <a href="!#"><i class="fab fa-twitter"></i></a>
+              <a href="!#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-5">
+          <ul>
+            <li>
+              <h4>Company</h4>
+            </li>
+            <li><a href="#about" id="navbar-link">About</a></li>
+            <li><a href="#!">Contact</a></li>
+            <li><a href="#!">Careers </a></li>
+            <li><a href="#blogs" id="navbar-link">Blog </a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-5">
+          <ul>
+            <li>
+              <h4>Support</h4>
+            </li>
+            <li><a href="#!">FAQs</a></li>
+            <li><a href="#!">Privacy Policy</a></li>
+            <li><a href="#!">Help </a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-5">
+          <ul>
+            <li>
+              <h4>Company</h4>
+            </li>
+            <li><a href="#!">Community</a></li>
+            <li><a href="#!">Telegram</a></li>
+            <li><a href="#!">Go Premium </a></li>
+            <li><a href="#!">Affiliates </a></li>
+            <li><a href="#!">Free Classes </a></li>
+            <li><a href="#!">Scholarship </a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-5">
+          <ul>
+            <li>
+              <h4>Terms</h4>
+            </li>
+            <li><a href="#!">Privacy Policy</a></li>
+            <li><a href="#!">Terms and Conditions</a></li>
+            <li><a href="#!">Copyright Policy</a></li>
+            <li><a href="#!">Security</a></li>
+          </ul>
+        </div>
+        <div class="bor-bottom"></div>
+      </div>
+      <div class="row footer-bottom justify-content-center">
+        <div class="col-lg-4 col-6">
+          <div class="footer-bottom-section">
+            <span>Terms and Conditions</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6">
+          <div class="footer-bottom-section">
+            <span>23,022,039 Registered User</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6">
+          <div class="footer-bottom-section">
+            <span>Copyright © 2020 Onedy All rights reserved</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer / -->
+
+  <!-- script start -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/jquery.easypiechart.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/main.js"></script>
+  <!-- script end -->
+</body>
+
+</html>
