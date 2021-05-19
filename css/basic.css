@@ -416,6 +416,7 @@ html {
 /* header */
 header {
   position: fixed;
+  padding: 15px 0;
   width: 100%;
   background: var(--tmdbDarkBlue);
 }
@@ -449,6 +450,54 @@ header .navbar__link {
   font-weight: var(--tmdbWeightSemiBold);
   font-family: var(--tmdbFamilySoursSans);
   color: var(--tmdbWhite);
+}
+header .navbar__right {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header .navbar__right li {
+  margin-left: 30px;
+}
+header .navbar__right li a {
+  color: var(--tmdbWhite);
+  font-size: 1rem;
+  font-weight: var(--tmdbWeightSemiBold);
+  font-family: var(--tmdbFamilySoursSans);
+  text-decoration: none;
+}
+header .navbar__right .icon-add a .fa {
+  font-size: 1.3rem;
+  color: var(--tmdbWhite);
+}
+header .navbar__right .translate span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 26px;
+  font-size: 1rem;
+  font-weight: var(--tmdbWeightSemiBold);
+  font-family: var(--tmdbFamilySoursSans);
+  color: var(--tmdbWhite);
+  background: none;
+  border: 1px solid var(--tmdbWhite);
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: linear 0.1s;
+}
+header .navbar__right .translate span:hover {
+  color: var(--tmdbDarkBlue);
+  background: var(--tmdbWhite);
+}
+header .navbar__right .search .btn {
+  color: #01b4e4;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+header .navbar__right .search .btn .fa {
+  font-size: 20px;
 }
 
 /* header / */
