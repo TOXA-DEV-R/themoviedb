@@ -9,6 +9,8 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tmdbFamilySoursSans: "Source Sans Pro", sans-serif;
   --tmdbWeightSemiBold: 600;
+  --tmdbLightGreen: rgb(30, 213, 169);
+  --tmdbLightBlue: rgb(1, 180, 228);
 }
 html {
   font-size: 16px;
@@ -23,6 +25,8 @@ $tmdbDarkBlue: var(--tmdbDarkBlue);
 $tmdbfontFamily: var(--tmdbfontFamily);
 $tmdbFamilySoursSans: var(--tmdbFamilySoursSans);
 $tmdbWeightSemiBold: var(--tmdbWeightSemiBold);
+$tmdbLightGreen: var(--tmdbLightGreen);
+$tmdbLightBlue: var(--tmdbLightBlue);
 // font-family scss end
 
 * {
@@ -30,6 +34,7 @@ $tmdbWeightSemiBold: var(--tmdbWeightSemiBold);
   padding: 0;
   box-sizing: border-box;
   font-style: normal;
+  font-family: $tmdbFamilySoursSans;
 }
 
 // flex-box

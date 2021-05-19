@@ -9,6 +9,8 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tmdbFamilySoursSans: "Source Sans Pro", sans-serif;
   --tmdbWeightSemiBold: 600;
+  --tmdbLightGreen: rgb(30, 213, 169);
+  --tmdbLightBlue: rgb(1, 180, 228);
 }
 
 html {
@@ -23,6 +25,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-style: normal;
+  font-family: var(--tmdbFamilySoursSans);
 }
 
 .row {
@@ -416,6 +419,8 @@ html {
 /* header */
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   padding: 15px 0;
   width: 100%;
   background: var(--tmdbDarkBlue);
@@ -501,6 +506,66 @@ header .navbar__right .search .btn .fa {
 }
 
 /* header / */
+/* main */
+main {
+  max-width: 100%;
+  margin-top: 66px;
+  padding: 60px 0;
+  background: url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/rCxdJkk5PMCWIzRWcpqIxUaWnf1.jpg") no-repeat center center/cover;
+}
+main .section-media__search {
+  width: 100%;
+}
+main .section-media__search h2 {
+  font-size: 4vw;
+  line-height: 4vw;
+  font-weight: 700;
+  color: var(--tmdbWhite);
+}
+main .section-media__search h3 {
+  font-size: 2.1vw;
+  line-height: 2.1vw;
+  font-weight: 700;
+  color: var(--tmdbWhite);
+}
+main .section-media__search .search form {
+  width: 100%;
+  height: 47px;
+  margin-top: 50px;
+  position: relative;
+}
+main .section-media__search .search form label input[type=text] {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  line-height: 2vw;
+  font-size: 1.3vw;
+  outline: none;
+}
+main .section-media__search .search form label input[type=text]::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+main .section-media__search .search form label input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 26px;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-weight: 700;
+  color: var(--tmdbWhite);
+  background: linear-gradient(to right, var(--tmdbLightGreen) 0%, var(--tmdbLightBlue) 100%);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+main .section-media__search .search form label input[type=submit]:hover {
+  color: var(--tmdbDarkBlue);
+}
+
+/* main / */
 /*pages end*/
 
 /*# sourceMappingURL=basic.css.map */
