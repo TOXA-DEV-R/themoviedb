@@ -10,6 +10,8 @@
   width: auto;
   max-width: 100%;
   position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @for $i from 1 through 12 {
@@ -94,9 +96,9 @@
     justify-content: unset;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1337px) {
   .container {
-    max-width: 1358px;
+    max-width: 1308px;
   }
   @for $i from 1 through 12 {
     .col-xl-#{$i} {

@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/basic.css">
   <title>The Movie Database (TMDb)</title>
 </head>
 
@@ -12,12 +16,39 @@
   <!-- header -->
   <header>
     <div class="container">
-      <nav class="row navbar">
+      <nav class="row navbar justify-lg-content-between">
         <div class="col-auto">
           <div class="navbar__left">
-            <a href="/"><img src="./img/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
-                alt=""></a>
+            <a href="/" class="logo">
+              <img src="./img/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+                alt="logo">
+            </a>
+            <ul class="navbar__menu">
+              <li><a href="/" class="navbar__link">Movies</a></li>
+              <li><a href="/" class="navbar__link">TV Shows</a></li>
+              <li><a href="/" class="navbar__link">People</a></li>
+              <li><a href="/" class="navbar__link">More</a></li>
+            </ul>
           </div>
+        </div>
+        <div class="col-auto">
+          <ul class="navbar__right">
+            <li class="icon-add">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </li>
+            <li class="translate">
+              <span>en</span>
+            </li>
+            <li class="login">
+              <a href="/">Login</a>
+            </li>
+            <li class="join">
+              <a href="/">Join TMDb</a>
+            </li>
+            <li class="search"><button class="btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button></li>
+          </ul>
         </div>
       </nav>
     </div>

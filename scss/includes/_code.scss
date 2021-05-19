@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+
+/* font-family start*/
+:root {
+  --tmdbWhite: white; // global white
+  --tmdbDarkBlue: rgb(3, 37, 65); //color global
+  --tmdbfontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --tmdbFamilySoursSans: "Source Sans Pro", sans-serif;
+  --tmdbWeightSemiBold: 600;
+}
+html {
+  font-size: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* font-family end*/
+
+// font-family scss start
+$tmdbWhite: var(--tmdbWhite); // global white
+$tmdbDarkBlue: var(--tmdbDarkBlue);
+$tmdbfontFamily: var(--tmdbfontFamily);
+$tmdbFamilySoursSans: var(--tmdbFamilySoursSans);
+$tmdbWeightSemiBold: var(--tmdbWeightSemiBold);
+// font-family scss end
+
 * {
   margin: 0;
   padding: 0;
@@ -5,21 +32,26 @@
   font-style: normal;
 }
 
-/* font-family start*/
-:root {
-  --font-fy-Poppins: "Poppins", sans-serif;
-  --font-fy-Playfair-d: "Playfair Display", serif;
-  --font-weight-Medium: 500; ///global weight Medium
-  --white-gl: white; // global white
+// flex-box
+@mixin display-Ju_center {
+  display: flex;
+  justify-content: center;
 }
-html {
-  font-size: 16px;
-}
-/* font-family end*/
 
-// font-family scss start
-$font-fy-Poppins: var(--font-fy-Poppins);
-$font-fy-Playfair-d: var(--font-fy-Playfair-d);
-$font-weight-Medium: var(--font-weight-Medium);
-$white-gl: var(--white-gl); // global white
-// font-family scss end
+@mixin display-Al_center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin display-Ju_center-Al_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin display-Fl-column-Al_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+// flex-box /
