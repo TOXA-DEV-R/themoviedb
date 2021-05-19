@@ -1,80 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+
+/* font-family start*/
+:root {
+  --tmdbWhite: white; // global white
+  --tmdbDarkBlue: rgb(3, 37, 65); //color global
+  --tmdbfontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --tmdbFamilySoursSans: "Source Sans Pro", sans-serif;
+  --tmdbWeightSemiBold: 600;
+  --tmdbLightGreen: rgb(30, 213, 169);
+  --tmdbLightBlue: rgb(1, 180, 228);
+}
+html {
+  font-size: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* font-family end*/
+
+// font-family scss start
+$tmdbWhite: var(--tmdbWhite); // global white
+$tmdbDarkBlue: var(--tmdbDarkBlue);
+$tmdbfontFamily: var(--tmdbfontFamily);
+$tmdbFamilySoursSans: var(--tmdbFamilySoursSans);
+$tmdbWeightSemiBold: var(--tmdbWeightSemiBold);
+$tmdbLightGreen: var(--tmdbLightGreen);
+$tmdbLightBlue: var(--tmdbLightBlue);
+// font-family scss end
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-style: normal;
+  font-family: $tmdbFamilySoursSans;
 }
 
-/* font-family start*/
-:root {
-  --font-fy-Poppins: "Poppins", sans-serif;
-  --font-fy-Playfair-d: "Playfair Display", serif;
-  --font-weight-Medium: 500; ///global weight Medium
-  --white-gl: white; // global white
+// flex-box
+@mixin display-Ju_center {
+  display: flex;
+  justify-content: center;
 }
-html {
-  font-size: 16px;
-}
-/* font-family end*/
 
-// font-family scss start
-$font-fy-Poppins: var(--font-fy-Poppins);
-$font-fy-Playfair-d: var(--font-fy-Playfair-d);
-$font-weight-Medium: var(--font-weight-Medium);
-$white-gl: var(--white-gl); // global white
-// font-family scss end
-* {
-  font-family: $font-fy-Poppins;
+@mixin display-Al_center {
+  display: flex;
+  align-items: center;
 }
-/* global artical-text start*/
-h3.articl-text {
-  font-family: $font-fy-Playfair-d;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 2rem;
-  color: #04004d;
-  letter-spacing: 1px;
-}
-/* global artical-text end*/
 
-/*.global__text start*/
-.global__text {
-  width: 100%;
-  text-align: center;
-  p {
-    margin-top: 12px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 14px;
-    color: #848199;
-  }
+@mixin display-Ju_center-Al_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/*.global__text end*/
 
-.btn-up {
-  position: fixed;
-  bottom: 100px;
-  right: 60px;
-  z-index: 100;
-  width: 50px;
-  height: 50px;
-  display: none;
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 0 15px -7px #000;
-  outline: none;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: all 300ms ease-in-out;
-  .fa {
-    font-size: 20px;
-    color: #828282;
-  }
-  &.active {
-    display: block;
-  }
-  &:hover {
-    opacity: 1;
-  }
+@mixin display-Fl-column-Al_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+// flex-box /
