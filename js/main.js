@@ -10,11 +10,12 @@ function tabsFunction(tabs) {
         .classList.remove("active");
       e.target.parentElement.classList.add("active");
       const tabContentName = e.target.parentElement.dataset.content;
-      console.log(tabContentName);
+
       document
         .querySelector(`.${tabs}-content-item.active`)
         .classList.remove("active");
       const tabContent = document.getElementById(tabContentName);
+
       tabContent.classList.add("active");
     }
   });
@@ -22,6 +23,7 @@ function tabsFunction(tabs) {
 
 tabsFunction("tabs");
 tabsFunction("newTabs");
+tabsFunction("trailers-tabs");
 
 $(function () {
   $(".chart").easyPieChart({

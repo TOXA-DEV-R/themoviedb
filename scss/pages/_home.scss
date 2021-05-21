@@ -169,7 +169,8 @@ main .section-media {
 /* .section-media / */
 
 /* section-movies */
-main .section-movies {
+main .section-movies,
+main .section-trailers {
   &__content {
     @include display-Al_center;
     margin-top: 30px;
@@ -180,7 +181,8 @@ main .section-movies {
     }
   }
   .tabs,
-  .newTabs {
+  .newTabs,
+  .trailers-tabs {
     display: flex;
     list-style: none;
     border: 1px solid $tmdbDarkBlue;
@@ -300,4 +302,86 @@ main .section-movies {
     }
   }
 }
-/* section-movies / */
+/* / section-movies  */
+/* section-trailers */
+main .section-trailers {
+  position: relative;
+  background: url("../../img/ZSf3cxasXnldlCxvgrBGwDuk2P.jpg") no-repeat center
+    center / cover;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(3, 37, 65, 0.75) 0%,
+      rgba(3, 37, 65, 0.75) 100%
+    );
+  }
+  &__content {
+    h2 {
+      color: $tmdbWhite;
+    }
+  }
+  .col-12 {
+    z-index: 10;
+  }
+  .trailers-tabs {
+    border: 1px solid $tmdbLightGreen;
+    .tab-link {
+      background: transparent;
+      a {
+        color: $tmdbWhite;
+        background: transparent;
+      }
+      &.active {
+        background: $tmdbLightGreen;
+        a {
+          color: $tmdbDarkBlue;
+          background: transparent;
+          -webkit-text-fill-color: unset;
+        }
+      }
+    }
+    &-content-item {
+      padding-bottom: 20px;
+
+      .card {
+        max-width: 315px;
+        &__img {
+          width: 100%;
+          height: 177px;
+        }
+        iframe {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+        }
+        &__body {
+          margin-top: 15px;
+          text-align: center;
+          h3 {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            font-weight: $tmdbWeightSemiBold;
+            a {
+              color: $tmdbWhite;
+            }
+          }
+          p {
+            margin-top: 5px;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            font-weight: $tmdbWeightRegular;
+            color: $tmdbWhite;
+          }
+        }
+      }
+    }
+  }
+}
+/* / section-trailers */
