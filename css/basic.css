@@ -2,13 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
 /* font-family start*/
 :root {
-  --tmdbWhite: white;
   --tmdbDarkBlue: rgb(3, 37, 65);
   --tmdbfontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tmdbFamilySoursSans: "Source Sans Pro", sans-serif;
+  --tmdbWeightRegular: 400;
   --tmdbWeightSemiBold: 600;
+  --tmdbWeightBold: 700;
+  --tmdbWeightBlack: 900;
+  --tmdbWhite: white;
+  --tmdbBlack: rgb(0, 0, 0);
   --tmdbLightGreen: rgb(30, 213, 169);
   --tmdbLightBlue: rgb(1, 180, 228);
 }
@@ -424,6 +428,7 @@ header {
   padding: 15px 0;
   width: 100%;
   background: var(--tmdbDarkBlue);
+  z-index: 100;
 }
 header .navbar__left {
   display: flex;
@@ -509,6 +514,12 @@ header .navbar__right .search .btn .fa {
 /* main */
 main {
   max-width: 100%;
+}
+
+/* main / */
+/* .section-media */
+main .section-media {
+  max-width: 100%;
   margin-top: 66px;
   padding: 60px 0;
   background: url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/rCxdJkk5PMCWIzRWcpqIxUaWnf1.jpg") no-repeat center center/cover;
@@ -565,7 +576,321 @@ main .section-media__search .search form label input[type=submit]:hover {
   color: var(--tmdbDarkBlue);
 }
 
-/* main / */
+/* .section-media / */
+/* section-movies */
+main .section-movies__content,
+main .section-trailers__content {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+main .section-movies__content h2,
+main .section-trailers__content h2 {
+  font-size: 1.6rem;
+  font-weight: var(--tmdbWeightSemiBold);
+  margin-right: 20px;
+}
+main .section-movies .tabs,
+main .section-movies .newTabs,
+main .section-movies .trailers-tabs,
+main .section-trailers .tabs,
+main .section-trailers .newTabs,
+main .section-trailers .trailers-tabs {
+  display: flex;
+  list-style: none;
+  border: 1px solid var(--tmdbDarkBlue);
+  border-radius: 30px;
+}
+main .section-movies .tabs li,
+main .section-movies .newTabs li,
+main .section-movies .trailers-tabs li,
+main .section-trailers .tabs li,
+main .section-trailers .newTabs li,
+main .section-trailers .trailers-tabs li {
+  padding: 4px 20px;
+  border-radius: 30px;
+}
+main .section-movies .tabs li a,
+main .section-movies .newTabs li a,
+main .section-movies .trailers-tabs li a,
+main .section-trailers .tabs li a,
+main .section-trailers .newTabs li a,
+main .section-trailers .trailers-tabs li a {
+  display: block;
+  font-weight: var(--tmdbWeightSemiBold);
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--tmdbDarkBlue);
+}
+main .section-movies .tabs li.active,
+main .section-movies .newTabs li.active,
+main .section-movies .trailers-tabs li.active,
+main .section-trailers .tabs li.active,
+main .section-trailers .newTabs li.active,
+main .section-trailers .trailers-tabs li.active {
+  background: var(--tmdbDarkBlue);
+}
+main .section-movies .tabs li.active a,
+main .section-movies .newTabs li.active a,
+main .section-movies .trailers-tabs li.active a,
+main .section-trailers .tabs li.active a,
+main .section-trailers .newTabs li.active a,
+main .section-trailers .trailers-tabs li.active a {
+  background: linear-gradient(to right, var(--tmdbLightGreen) 0%, var(--tmdbLightBlue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .section-movies .tabs-content-item,
+main .section-movies .newTabs-content-item,
+main .section-movies .trailers-tabs-content-item,
+main .section-trailers .tabs-content-item,
+main .section-trailers .newTabs-content-item,
+main .section-trailers .trailers-tabs-content-item {
+  margin-top: 20px;
+  display: none;
+  overflow: hidden;
+  overflow-x: scroll;
+  padding-bottom: 60px;
+}
+main .section-movies .tabs-content-item::-webkit-scrollbar,
+main .section-movies .newTabs-content-item::-webkit-scrollbar,
+main .section-movies .trailers-tabs-content-item::-webkit-scrollbar,
+main .section-trailers .tabs-content-item::-webkit-scrollbar,
+main .section-trailers .newTabs-content-item::-webkit-scrollbar,
+main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar {
+  height: 8px;
+}
+main .section-movies .tabs-content-item::-webkit-scrollbar-track,
+main .section-movies .newTabs-content-item::-webkit-scrollbar-track,
+main .section-movies .trailers-tabs-content-item::-webkit-scrollbar-track,
+main .section-trailers .tabs-content-item::-webkit-scrollbar-track,
+main .section-trailers .newTabs-content-item::-webkit-scrollbar-track,
+main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+main .section-movies .tabs-content-item::-webkit-scrollbar-thumb,
+main .section-movies .newTabs-content-item::-webkit-scrollbar-thumb,
+main .section-movies .trailers-tabs-content-item::-webkit-scrollbar-thumb,
+main .section-trailers .tabs-content-item::-webkit-scrollbar-thumb,
+main .section-trailers .newTabs-content-item::-webkit-scrollbar-thumb,
+main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 8px;
+}
+main .section-movies .tabs-content-item.active,
+main .section-movies .newTabs-content-item.active,
+main .section-movies .trailers-tabs-content-item.active,
+main .section-trailers .tabs-content-item.active,
+main .section-trailers .newTabs-content-item.active,
+main .section-trailers .trailers-tabs-content-item.active {
+  display: flex;
+  flex-direction: unset;
+}
+main .section-movies .tabs-content-item .card,
+main .section-movies .newTabs-content-item .card,
+main .section-movies .trailers-tabs-content-item .card,
+main .section-trailers .tabs-content-item .card,
+main .section-trailers .newTabs-content-item .card,
+main .section-trailers .trailers-tabs-content-item .card {
+  max-width: 150px;
+  width: 100%;
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+main .section-movies .tabs-content-item .card__img,
+main .section-movies .newTabs-content-item .card__img,
+main .section-movies .trailers-tabs-content-item .card__img,
+main .section-trailers .tabs-content-item .card__img,
+main .section-trailers .newTabs-content-item .card__img,
+main .section-trailers .trailers-tabs-content-item .card__img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+main .section-movies .tabs-content-item .card__img img,
+main .section-movies .newTabs-content-item .card__img img,
+main .section-movies .trailers-tabs-content-item .card__img img,
+main .section-trailers .tabs-content-item .card__img img,
+main .section-trailers .newTabs-content-item .card__img img,
+main .section-trailers .trailers-tabs-content-item .card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+}
+main .section-movies .tabs-content-item .card__img .chart-block,
+main .section-movies .newTabs-content-item .card__img .chart-block,
+main .section-movies .trailers-tabs-content-item .card__img .chart-block,
+main .section-trailers .tabs-content-item .card__img .chart-block,
+main .section-trailers .newTabs-content-item .card__img .chart-block,
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block {
+  transform: translate(11px, -23px);
+}
+main .section-movies .tabs-content-item .card__img .chart-block .chart,
+main .section-movies .newTabs-content-item .card__img .chart-block .chart,
+main .section-movies .trailers-tabs-content-item .card__img .chart-block .chart,
+main .section-trailers .tabs-content-item .card__img .chart-block .chart,
+main .section-trailers .newTabs-content-item .card__img .chart-block .chart,
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--tmdbDarkBlue);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+main .section-movies .tabs-content-item .card__img .chart-block .chart span,
+main .section-movies .newTabs-content-item .card__img .chart-block .chart span,
+main .section-movies .trailers-tabs-content-item .card__img .chart-block .chart span,
+main .section-trailers .tabs-content-item .card__img .chart-block .chart span,
+main .section-trailers .newTabs-content-item .card__img .chart-block .chart span,
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: var(--tmdbWhite);
+  font-weight: var(--tmdbWeightBold);
+}
+main .section-movies .tabs-content-item .card__img .chart-block .chart span sup,
+main .section-movies .newTabs-content-item .card__img .chart-block .chart span sup,
+main .section-movies .trailers-tabs-content-item .card__img .chart-block .chart span sup,
+main .section-trailers .tabs-content-item .card__img .chart-block .chart span sup,
+main .section-trailers .newTabs-content-item .card__img .chart-block .chart span sup,
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart span sup {
+  font-size: 7px;
+  color: var(--tmdbWhite);
+}
+main .section-movies .tabs-content-item .card__img .chart-block .chart canvas,
+main .section-movies .newTabs-content-item .card__img .chart-block .chart canvas,
+main .section-movies .trailers-tabs-content-item .card__img .chart-block .chart canvas,
+main .section-trailers .tabs-content-item .card__img .chart-block .chart canvas,
+main .section-trailers .newTabs-content-item .card__img .chart-block .chart canvas,
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart canvas {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .section-movies .tabs-content-item .card__body,
+main .section-movies .newTabs-content-item .card__body,
+main .section-movies .trailers-tabs-content-item .card__body,
+main .section-trailers .tabs-content-item .card__body,
+main .section-trailers .newTabs-content-item .card__body,
+main .section-trailers .trailers-tabs-content-item .card__body {
+  margin-top: 30px;
+  padding: 0 11px;
+}
+main .section-movies .tabs-content-item .card__title,
+main .section-movies .newTabs-content-item .card__title,
+main .section-movies .trailers-tabs-content-item .card__title,
+main .section-trailers .tabs-content-item .card__title,
+main .section-trailers .newTabs-content-item .card__title,
+main .section-trailers .trailers-tabs-content-item .card__title {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+main .section-movies .tabs-content-item .card__title a,
+main .section-movies .newTabs-content-item .card__title a,
+main .section-movies .trailers-tabs-content-item .card__title a,
+main .section-trailers .tabs-content-item .card__title a,
+main .section-trailers .newTabs-content-item .card__title a,
+main .section-trailers .trailers-tabs-content-item .card__title a {
+  color: var(--tmdbBlack);
+  text-decoration: none;
+}
+main .section-movies .tabs-content-item .card__date,
+main .section-movies .newTabs-content-item .card__date,
+main .section-movies .trailers-tabs-content-item .card__date,
+main .section-trailers .tabs-content-item .card__date,
+main .section-trailers .newTabs-content-item .card__date,
+main .section-trailers .trailers-tabs-content-item .card__date {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* / section-movies  */
+/* section-trailers */
+main .section-trailers {
+  position: relative;
+  background: url("../../img/ZSf3cxasXnldlCxvgrBGwDuk2P.jpg") no-repeat center center/cover;
+}
+main .section-trailers::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(3, 37, 65, 0.75) 0%, rgba(3, 37, 65, 0.75) 100%);
+}
+main .section-trailers__content h2 {
+  color: var(--tmdbWhite);
+}
+main .section-trailers .col-12 {
+  z-index: 10;
+}
+main .section-trailers .trailers-tabs {
+  border: 1px solid var(--tmdbLightGreen);
+}
+main .section-trailers .trailers-tabs .tab-link {
+  background: transparent;
+}
+main .section-trailers .trailers-tabs .tab-link a {
+  color: var(--tmdbWhite);
+  background: transparent;
+}
+main .section-trailers .trailers-tabs .tab-link.active {
+  background: var(--tmdbLightGreen);
+}
+main .section-trailers .trailers-tabs .tab-link.active a {
+  color: var(--tmdbDarkBlue);
+  background: transparent;
+  -webkit-text-fill-color: unset;
+}
+main .section-trailers .trailers-tabs-content-item {
+  padding-bottom: 20px;
+}
+main .section-trailers .trailers-tabs-content-item .card {
+  max-width: 315px;
+}
+main .section-trailers .trailers-tabs-content-item .card__img {
+  width: 100%;
+  height: 177px;
+}
+main .section-trailers .trailers-tabs-content-item .card iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+main .section-trailers .trailers-tabs-content-item .card__body {
+  margin-top: 15px;
+  text-align: center;
+}
+main .section-trailers .trailers-tabs-content-item .card__body h3 {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: var(--tmdbWeightSemiBold);
+}
+main .section-trailers .trailers-tabs-content-item .card__body h3 a {
+  color: var(--tmdbWhite);
+}
+main .section-trailers .trailers-tabs-content-item .card__body p {
+  margin-top: 5px;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: var(--tmdbWeightRegular);
+  color: var(--tmdbWhite);
+}
+
+/* / section-trailers */
 /*pages end*/
 
 /*# sourceMappingURL=basic.css.map */
