@@ -34,3 +34,14 @@ $(function () {
     scaleLength: false,
   });
 });
+
+const btnplay = document.querySelector(".card__img .btn-play");
+const trailersModal = document.querySelector(".section-trailers-modal");
+const btnTimes = document.querySelector(".section-trailers-modal .btn-times ");
+
+btnplay.addEventListener("click", function () {
+  trailersModal.classList.add("active");
+});
+btnTimes.addEventListener("click", function () {
+  trailersModal.classList.remove("active");
+});
