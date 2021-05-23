@@ -610,17 +610,18 @@ main .section-trailers .trailers-tabs li {
   padding: 4px 20px;
   border-radius: 30px;
 }
-main .section-movies .tabs li a,
-main .section-movies .newTabs li a,
-main .section-movies .trailers-tabs li a,
-main .section-trailers .tabs li a,
-main .section-trailers .newTabs li a,
-main .section-trailers .trailers-tabs li a {
+main .section-movies .tabs li span,
+main .section-movies .newTabs li span,
+main .section-movies .trailers-tabs li span,
+main .section-trailers .tabs li span,
+main .section-trailers .newTabs li span,
+main .section-trailers .trailers-tabs li span {
   display: block;
   font-weight: var(--tmdbWeightSemiBold);
   font-size: 1.1rem;
   text-decoration: none;
   color: var(--tmdbDarkBlue);
+  cursor: pointer;
 }
 main .section-movies .tabs li.active,
 main .section-movies .newTabs li.active,
@@ -630,12 +631,12 @@ main .section-trailers .newTabs li.active,
 main .section-trailers .trailers-tabs li.active {
   background: var(--tmdbDarkBlue);
 }
-main .section-movies .tabs li.active a,
-main .section-movies .newTabs li.active a,
-main .section-movies .trailers-tabs li.active a,
-main .section-trailers .tabs li.active a,
-main .section-trailers .newTabs li.active a,
-main .section-trailers .trailers-tabs li.active a {
+main .section-movies .tabs li.active span,
+main .section-movies .newTabs li.active span,
+main .section-movies .trailers-tabs li.active span,
+main .section-trailers .tabs li.active span,
+main .section-trailers .newTabs li.active span,
+main .section-trailers .trailers-tabs li.active span {
   background: linear-gradient(to right, var(--tmdbLightGreen) 0%, var(--tmdbLightBlue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -843,14 +844,14 @@ main .section-trailers .trailers-tabs {
 main .section-trailers .trailers-tabs .tab-link {
   background: transparent;
 }
-main .section-trailers .trailers-tabs .tab-link a {
+main .section-trailers .trailers-tabs .tab-link span {
   color: var(--tmdbWhite);
   background: transparent;
 }
 main .section-trailers .trailers-tabs .tab-link.active {
   background: var(--tmdbLightGreen);
 }
-main .section-trailers .trailers-tabs .tab-link.active a {
+main .section-trailers .trailers-tabs .tab-link.active span {
   color: var(--tmdbDarkBlue);
   background: transparent;
   -webkit-text-fill-color: unset;

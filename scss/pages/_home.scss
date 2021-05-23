@@ -190,17 +190,18 @@ main .section-trailers {
     li {
       padding: 4px 20px;
       border-radius: 30px;
-      a {
+      span {
         display: block;
         font-weight: $tmdbWeightSemiBold;
         font-size: 1.1rem;
         text-decoration: none;
         color: $tmdbDarkBlue;
+        cursor: pointer;
       }
 
       &.active {
         background: $tmdbDarkBlue;
-        a {
+        span {
           background: linear-gradient(
             to right,
             $tmdbLightGreen 0%,
@@ -334,13 +335,13 @@ main .section-trailers {
     border: 1px solid $tmdbLightGreen;
     .tab-link {
       background: transparent;
-      a {
+      span {
         color: $tmdbWhite;
         background: transparent;
       }
       &.active {
         background: $tmdbLightGreen;
-        a {
+        span {
           color: $tmdbDarkBlue;
           background: transparent;
           -webkit-text-fill-color: unset;
