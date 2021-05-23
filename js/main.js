@@ -35,13 +35,16 @@ $(function () {
   });
 });
 
-const btnplay = document.querySelector(".card__img .btn-play");
+const btnplays = document.querySelectorAll(".card__img .btn-play");
 const trailersModal = document.querySelector(".section-trailers-modal");
 const btnTimes = document.querySelector(".section-trailers-modal .btn-times ");
 
-btnplay.addEventListener("click", function () {
-  trailersModal.classList.add("active");
+btnplays.forEach((item) => {
+  item.addEventListener("click", function () {
+    trailersModal.classList.add("active");
+  });
 });
+
 btnTimes.addEventListener("click", function () {
   trailersModal.classList.remove("active");
 });

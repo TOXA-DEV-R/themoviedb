@@ -408,24 +408,32 @@ main .section-trailers {
     background: rgba(0, 0, 0, 0.795);
     transform: scale(0);
     z-index: 110;
+    display: none;
+    transition: all 200ms;
     &.active {
+      display: flex;
       transform: scale(1);
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
     }
     iframe {
       width: 552px;
-      height: 340px;
-      padding-top: 30px;
+      height: 310px;
       background: $tmdbBlack;
     }
     .btn-times {
-      position: absolute;
-      top: 13%;
-      right: 31%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px 20px;
       color: $tmdbWhite;
-      background: transparent;
+      background: $tmdbBlack;
       border: none;
-      cursor: pointer;
       outline: none;
+      .fa {
+        cursor: pointer;
+      }
     }
   }
 }

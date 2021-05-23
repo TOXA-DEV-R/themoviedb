@@ -915,25 +915,33 @@ main .section-trailers-modal {
   background: rgba(0, 0, 0, 0.795);
   transform: scale(0);
   z-index: 110;
+  display: none;
+  transition: all 200ms;
 }
 main .section-trailers-modal.active {
+  display: flex;
   transform: scale(1);
+}
+main .section-trailers-modal-container {
+  display: flex;
+  flex-direction: column;
 }
 main .section-trailers-modal iframe {
   width: 552px;
-  height: 340px;
-  padding-top: 30px;
+  height: 310px;
   background: var(--tmdbBlack);
 }
 main .section-trailers-modal .btn-times {
-  position: absolute;
-  top: 13%;
-  right: 31%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 20px;
   color: var(--tmdbWhite);
-  background: transparent;
+  background: var(--tmdbBlack);
   border: none;
-  cursor: pointer;
   outline: none;
+}
+main .section-trailers-modal .btn-times .fa {
+  cursor: pointer;
 }
 
 /* / section-trailers */
