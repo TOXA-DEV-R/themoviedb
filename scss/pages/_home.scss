@@ -355,12 +355,27 @@ main .section-trailers {
         &__img {
           width: 100%;
           height: 177px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+          }
+          .btn-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            .fa {
+              font-size: 45px;
+              color: $tmdbWhite;
+            }
+          }
         }
-        iframe {
-          width: 100%;
-          height: 100%;
-          border-radius: 8px;
-        }
+
         &__body {
           margin-top: 15px;
           text-align: center;
@@ -380,6 +395,44 @@ main .section-trailers {
             color: $tmdbWhite;
           }
         }
+      }
+    }
+  }
+  &-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include display-Ju_center-Al_center;
+    background: rgba(0, 0, 0, 0.795);
+    transform: scale(0);
+    z-index: 110;
+    display: none;
+    transition: all 200ms;
+    &.active {
+      display: flex;
+      transform: scale(1);
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
+    }
+    iframe {
+      width: 552px;
+      height: 310px;
+      background: $tmdbBlack;
+    }
+    .btn-times {
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px 20px;
+      color: $tmdbWhite;
+      background: $tmdbBlack;
+      border: none;
+      outline: none;
+      .fa {
+        cursor: pointer;
       }
     }
   }
