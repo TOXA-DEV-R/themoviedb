@@ -15,6 +15,11 @@
   --tmdbBlack: rgb(0, 0, 0); // global black
   --tmdbLightGreen: rgb(30, 213, 169);
   --tmdbLightBlue: rgb(1, 180, 228);
+  --accountPurple: rgb(128, 91, 231);
+  --tmdbLogoOrange: rgb(253, 193, 112);
+  --tmdbLogoRed: rgb(217, 59, 99);
+  --tmdbLighterGreen: rgb(192, 254, 207);
+  --tmdbLightGreen: rgb(30, 213, 169);
 }
 html {
   font-size: 16px;
@@ -35,6 +40,11 @@ $tmdbWeightBold: var(--tmdbWeightBold);
 $tmdbWeightBlack: var(--tmdbWeightBlack);
 $tmdbLightGreen: var(--tmdbLightGreen);
 $tmdbLightBlue: var(--tmdbLightBlue);
+$accountPurple: var(--accountPurple);
+$tmdbLogoOrange: var(--tmdbLogoOrange);
+$tmdbLogoRed: var(--tmdbLogoRed);
+$tmdbLighterGreen: var(--tmdbLighterGreen);
+$tmdbLightGreen: var(--tmdbLightGreen);
 // font-family scss end
 
 * {

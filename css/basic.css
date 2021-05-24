@@ -15,6 +15,11 @@
   --tmdbBlack: rgb(0, 0, 0);
   --tmdbLightGreen: rgb(30, 213, 169);
   --tmdbLightBlue: rgb(1, 180, 228);
+  --accountPurple: rgb(128, 91, 231);
+  --tmdbLogoOrange: rgb(253, 193, 112);
+  --tmdbLogoRed: rgb(217, 59, 99);
+  --tmdbLighterGreen: rgb(192, 254, 207);
+  --tmdbLightGreen: rgb(30, 213, 169);
 }
 
 html {
@@ -579,13 +584,15 @@ main .section-media__search .search form label input[type=submit]:hover {
 /* .section-media / */
 /* section-movies */
 main .section-movies__content,
-main .section-trailers__content {
+main .section-trailers__content,
+main .section-trending__content {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
 main .section-movies__content h2,
-main .section-trailers__content h2 {
+main .section-trailers__content h2,
+main .section-trending__content h2 {
   font-size: 1.6rem;
   font-weight: var(--tmdbWeightSemiBold);
   margin-right: 20px;
@@ -593,9 +600,15 @@ main .section-trailers__content h2 {
 main .section-movies .tabs,
 main .section-movies .newTabs,
 main .section-movies .trailers-tabs,
+main .section-movies .trending-tabs,
 main .section-trailers .tabs,
 main .section-trailers .newTabs,
-main .section-trailers .trailers-tabs {
+main .section-trailers .trailers-tabs,
+main .section-trailers .trending-tabs,
+main .section-trending .tabs,
+main .section-trending .newTabs,
+main .section-trending .trailers-tabs,
+main .section-trending .trending-tabs {
   display: flex;
   list-style: none;
   border: 1px solid var(--tmdbDarkBlue);
@@ -604,18 +617,30 @@ main .section-trailers .trailers-tabs {
 main .section-movies .tabs li,
 main .section-movies .newTabs li,
 main .section-movies .trailers-tabs li,
+main .section-movies .trending-tabs li,
 main .section-trailers .tabs li,
 main .section-trailers .newTabs li,
-main .section-trailers .trailers-tabs li {
+main .section-trailers .trailers-tabs li,
+main .section-trailers .trending-tabs li,
+main .section-trending .tabs li,
+main .section-trending .newTabs li,
+main .section-trending .trailers-tabs li,
+main .section-trending .trending-tabs li {
   padding: 4px 20px;
   border-radius: 30px;
 }
 main .section-movies .tabs li span,
 main .section-movies .newTabs li span,
 main .section-movies .trailers-tabs li span,
+main .section-movies .trending-tabs li span,
 main .section-trailers .tabs li span,
 main .section-trailers .newTabs li span,
-main .section-trailers .trailers-tabs li span {
+main .section-trailers .trailers-tabs li span,
+main .section-trailers .trending-tabs li span,
+main .section-trending .tabs li span,
+main .section-trending .newTabs li span,
+main .section-trending .trailers-tabs li span,
+main .section-trending .trending-tabs li span {
   display: block;
   font-weight: var(--tmdbWeightSemiBold);
   font-size: 1.1rem;
@@ -626,17 +651,29 @@ main .section-trailers .trailers-tabs li span {
 main .section-movies .tabs li.active,
 main .section-movies .newTabs li.active,
 main .section-movies .trailers-tabs li.active,
+main .section-movies .trending-tabs li.active,
 main .section-trailers .tabs li.active,
 main .section-trailers .newTabs li.active,
-main .section-trailers .trailers-tabs li.active {
+main .section-trailers .trailers-tabs li.active,
+main .section-trailers .trending-tabs li.active,
+main .section-trending .tabs li.active,
+main .section-trending .newTabs li.active,
+main .section-trending .trailers-tabs li.active,
+main .section-trending .trending-tabs li.active {
   background: var(--tmdbDarkBlue);
 }
 main .section-movies .tabs li.active span,
 main .section-movies .newTabs li.active span,
 main .section-movies .trailers-tabs li.active span,
+main .section-movies .trending-tabs li.active span,
 main .section-trailers .tabs li.active span,
 main .section-trailers .newTabs li.active span,
-main .section-trailers .trailers-tabs li.active span {
+main .section-trailers .trailers-tabs li.active span,
+main .section-trailers .trending-tabs li.active span,
+main .section-trending .tabs li.active span,
+main .section-trending .newTabs li.active span,
+main .section-trending .trailers-tabs li.active span,
+main .section-trending .trending-tabs li.active span {
   background: linear-gradient(to right, var(--tmdbLightGreen) 0%, var(--tmdbLightBlue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -644,9 +681,15 @@ main .section-trailers .trailers-tabs li.active span {
 main .section-movies .tabs-content-item,
 main .section-movies .newTabs-content-item,
 main .section-movies .trailers-tabs-content-item,
+main .section-movies .trending-tabs-content-item,
 main .section-trailers .tabs-content-item,
 main .section-trailers .newTabs-content-item,
-main .section-trailers .trailers-tabs-content-item {
+main .section-trailers .trailers-tabs-content-item,
+main .section-trailers .trending-tabs-content-item,
+main .section-trending .tabs-content-item,
+main .section-trending .newTabs-content-item,
+main .section-trending .trailers-tabs-content-item,
+main .section-trending .trending-tabs-content-item {
   margin-top: 20px;
   display: none;
   overflow: hidden;
@@ -656,44 +699,74 @@ main .section-trailers .trailers-tabs-content-item {
 main .section-movies .tabs-content-item::-webkit-scrollbar,
 main .section-movies .newTabs-content-item::-webkit-scrollbar,
 main .section-movies .trailers-tabs-content-item::-webkit-scrollbar,
+main .section-movies .trending-tabs-content-item::-webkit-scrollbar,
 main .section-trailers .tabs-content-item::-webkit-scrollbar,
 main .section-trailers .newTabs-content-item::-webkit-scrollbar,
-main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar {
+main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar,
+main .section-trailers .trending-tabs-content-item::-webkit-scrollbar,
+main .section-trending .tabs-content-item::-webkit-scrollbar,
+main .section-trending .newTabs-content-item::-webkit-scrollbar,
+main .section-trending .trailers-tabs-content-item::-webkit-scrollbar,
+main .section-trending .trending-tabs-content-item::-webkit-scrollbar {
   height: 8px;
 }
 main .section-movies .tabs-content-item::-webkit-scrollbar-track,
 main .section-movies .newTabs-content-item::-webkit-scrollbar-track,
 main .section-movies .trailers-tabs-content-item::-webkit-scrollbar-track,
+main .section-movies .trending-tabs-content-item::-webkit-scrollbar-track,
 main .section-trailers .tabs-content-item::-webkit-scrollbar-track,
 main .section-trailers .newTabs-content-item::-webkit-scrollbar-track,
-main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar-track {
+main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar-track,
+main .section-trailers .trending-tabs-content-item::-webkit-scrollbar-track,
+main .section-trending .tabs-content-item::-webkit-scrollbar-track,
+main .section-trending .newTabs-content-item::-webkit-scrollbar-track,
+main .section-trending .trailers-tabs-content-item::-webkit-scrollbar-track,
+main .section-trending .trending-tabs-content-item::-webkit-scrollbar-track {
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
 main .section-movies .tabs-content-item::-webkit-scrollbar-thumb,
 main .section-movies .newTabs-content-item::-webkit-scrollbar-thumb,
 main .section-movies .trailers-tabs-content-item::-webkit-scrollbar-thumb,
+main .section-movies .trending-tabs-content-item::-webkit-scrollbar-thumb,
 main .section-trailers .tabs-content-item::-webkit-scrollbar-thumb,
 main .section-trailers .newTabs-content-item::-webkit-scrollbar-thumb,
-main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar-thumb {
+main .section-trailers .trailers-tabs-content-item::-webkit-scrollbar-thumb,
+main .section-trailers .trending-tabs-content-item::-webkit-scrollbar-thumb,
+main .section-trending .tabs-content-item::-webkit-scrollbar-thumb,
+main .section-trending .newTabs-content-item::-webkit-scrollbar-thumb,
+main .section-trending .trailers-tabs-content-item::-webkit-scrollbar-thumb,
+main .section-trending .trending-tabs-content-item::-webkit-scrollbar-thumb {
   background: #dbdbdb;
   border-radius: 8px;
 }
 main .section-movies .tabs-content-item.active,
 main .section-movies .newTabs-content-item.active,
 main .section-movies .trailers-tabs-content-item.active,
+main .section-movies .trending-tabs-content-item.active,
 main .section-trailers .tabs-content-item.active,
 main .section-trailers .newTabs-content-item.active,
-main .section-trailers .trailers-tabs-content-item.active {
+main .section-trailers .trailers-tabs-content-item.active,
+main .section-trailers .trending-tabs-content-item.active,
+main .section-trending .tabs-content-item.active,
+main .section-trending .newTabs-content-item.active,
+main .section-trending .trailers-tabs-content-item.active,
+main .section-trending .trending-tabs-content-item.active {
   display: flex;
   flex-direction: unset;
 }
 main .section-movies .tabs-content-item .card,
 main .section-movies .newTabs-content-item .card,
 main .section-movies .trailers-tabs-content-item .card,
+main .section-movies .trending-tabs-content-item .card,
 main .section-trailers .tabs-content-item .card,
 main .section-trailers .newTabs-content-item .card,
-main .section-trailers .trailers-tabs-content-item .card {
+main .section-trailers .trailers-tabs-content-item .card,
+main .section-trailers .trending-tabs-content-item .card,
+main .section-trending .tabs-content-item .card,
+main .section-trending .newTabs-content-item .card,
+main .section-trending .trailers-tabs-content-item .card,
+main .section-trending .trending-tabs-content-item .card {
   max-width: 150px;
   width: 100%;
   flex: 0 0 auto;
@@ -702,9 +775,15 @@ main .section-trailers .trailers-tabs-content-item .card {
 main .section-movies .tabs-content-item .card__img,
 main .section-movies .newTabs-content-item .card__img,
 main .section-movies .trailers-tabs-content-item .card__img,
+main .section-movies .trending-tabs-content-item .card__img,
 main .section-trailers .tabs-content-item .card__img,
 main .section-trailers .newTabs-content-item .card__img,
-main .section-trailers .trailers-tabs-content-item .card__img {
+main .section-trailers .trailers-tabs-content-item .card__img,
+main .section-trailers .trending-tabs-content-item .card__img,
+main .section-trending .tabs-content-item .card__img,
+main .section-trending .newTabs-content-item .card__img,
+main .section-trending .trailers-tabs-content-item .card__img,
+main .section-trending .trending-tabs-content-item .card__img {
   position: relative;
   display: block;
   width: 100%;
@@ -712,9 +791,15 @@ main .section-trailers .trailers-tabs-content-item .card__img {
 main .section-movies .tabs-content-item .card__img img,
 main .section-movies .newTabs-content-item .card__img img,
 main .section-movies .trailers-tabs-content-item .card__img img,
+main .section-movies .trending-tabs-content-item .card__img img,
 main .section-trailers .tabs-content-item .card__img img,
 main .section-trailers .newTabs-content-item .card__img img,
-main .section-trailers .trailers-tabs-content-item .card__img img {
+main .section-trailers .trailers-tabs-content-item .card__img img,
+main .section-trailers .trending-tabs-content-item .card__img img,
+main .section-trending .tabs-content-item .card__img img,
+main .section-trending .newTabs-content-item .card__img img,
+main .section-trending .trailers-tabs-content-item .card__img img,
+main .section-trending .trending-tabs-content-item .card__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -725,17 +810,29 @@ main .section-trailers .trailers-tabs-content-item .card__img img {
 main .section-movies .tabs-content-item .card__img .chart-block,
 main .section-movies .newTabs-content-item .card__img .chart-block,
 main .section-movies .trailers-tabs-content-item .card__img .chart-block,
+main .section-movies .trending-tabs-content-item .card__img .chart-block,
 main .section-trailers .tabs-content-item .card__img .chart-block,
 main .section-trailers .newTabs-content-item .card__img .chart-block,
-main .section-trailers .trailers-tabs-content-item .card__img .chart-block {
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block,
+main .section-trailers .trending-tabs-content-item .card__img .chart-block,
+main .section-trending .tabs-content-item .card__img .chart-block,
+main .section-trending .newTabs-content-item .card__img .chart-block,
+main .section-trending .trailers-tabs-content-item .card__img .chart-block,
+main .section-trending .trending-tabs-content-item .card__img .chart-block {
   transform: translate(11px, -23px);
 }
 main .section-movies .tabs-content-item .card__img .chart-block .chart,
 main .section-movies .newTabs-content-item .card__img .chart-block .chart,
 main .section-movies .trailers-tabs-content-item .card__img .chart-block .chart,
+main .section-movies .trending-tabs-content-item .card__img .chart-block .chart,
 main .section-trailers .tabs-content-item .card__img .chart-block .chart,
 main .section-trailers .newTabs-content-item .card__img .chart-block .chart,
-main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart {
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart,
+main .section-trailers .trending-tabs-content-item .card__img .chart-block .chart,
+main .section-trending .tabs-content-item .card__img .chart-block .chart,
+main .section-trending .newTabs-content-item .card__img .chart-block .chart,
+main .section-trending .trailers-tabs-content-item .card__img .chart-block .chart,
+main .section-trending .trending-tabs-content-item .card__img .chart-block .chart {
   position: absolute;
   top: 0;
   left: 0;
@@ -747,9 +844,15 @@ main .section-trailers .trailers-tabs-content-item .card__img .chart-block .char
 main .section-movies .tabs-content-item .card__img .chart-block .chart span,
 main .section-movies .newTabs-content-item .card__img .chart-block .chart span,
 main .section-movies .trailers-tabs-content-item .card__img .chart-block .chart span,
+main .section-movies .trending-tabs-content-item .card__img .chart-block .chart span,
 main .section-trailers .tabs-content-item .card__img .chart-block .chart span,
 main .section-trailers .newTabs-content-item .card__img .chart-block .chart span,
-main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart span {
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart span,
+main .section-trailers .trending-tabs-content-item .card__img .chart-block .chart span,
+main .section-trending .tabs-content-item .card__img .chart-block .chart span,
+main .section-trending .newTabs-content-item .card__img .chart-block .chart span,
+main .section-trending .trailers-tabs-content-item .card__img .chart-block .chart span,
+main .section-trending .trending-tabs-content-item .card__img .chart-block .chart span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -761,18 +864,30 @@ main .section-trailers .trailers-tabs-content-item .card__img .chart-block .char
 main .section-movies .tabs-content-item .card__img .chart-block .chart span sup,
 main .section-movies .newTabs-content-item .card__img .chart-block .chart span sup,
 main .section-movies .trailers-tabs-content-item .card__img .chart-block .chart span sup,
+main .section-movies .trending-tabs-content-item .card__img .chart-block .chart span sup,
 main .section-trailers .tabs-content-item .card__img .chart-block .chart span sup,
 main .section-trailers .newTabs-content-item .card__img .chart-block .chart span sup,
-main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart span sup {
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart span sup,
+main .section-trailers .trending-tabs-content-item .card__img .chart-block .chart span sup,
+main .section-trending .tabs-content-item .card__img .chart-block .chart span sup,
+main .section-trending .newTabs-content-item .card__img .chart-block .chart span sup,
+main .section-trending .trailers-tabs-content-item .card__img .chart-block .chart span sup,
+main .section-trending .trending-tabs-content-item .card__img .chart-block .chart span sup {
   font-size: 7px;
   color: var(--tmdbWhite);
 }
 main .section-movies .tabs-content-item .card__img .chart-block .chart canvas,
 main .section-movies .newTabs-content-item .card__img .chart-block .chart canvas,
 main .section-movies .trailers-tabs-content-item .card__img .chart-block .chart canvas,
+main .section-movies .trending-tabs-content-item .card__img .chart-block .chart canvas,
 main .section-trailers .tabs-content-item .card__img .chart-block .chart canvas,
 main .section-trailers .newTabs-content-item .card__img .chart-block .chart canvas,
-main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart canvas {
+main .section-trailers .trailers-tabs-content-item .card__img .chart-block .chart canvas,
+main .section-trailers .trending-tabs-content-item .card__img .chart-block .chart canvas,
+main .section-trending .tabs-content-item .card__img .chart-block .chart canvas,
+main .section-trending .newTabs-content-item .card__img .chart-block .chart canvas,
+main .section-trending .trailers-tabs-content-item .card__img .chart-block .chart canvas,
+main .section-trending .trending-tabs-content-item .card__img .chart-block .chart canvas {
   position: relative;
   top: 50%;
   left: 50%;
@@ -781,36 +896,60 @@ main .section-trailers .trailers-tabs-content-item .card__img .chart-block .char
 main .section-movies .tabs-content-item .card__body,
 main .section-movies .newTabs-content-item .card__body,
 main .section-movies .trailers-tabs-content-item .card__body,
+main .section-movies .trending-tabs-content-item .card__body,
 main .section-trailers .tabs-content-item .card__body,
 main .section-trailers .newTabs-content-item .card__body,
-main .section-trailers .trailers-tabs-content-item .card__body {
+main .section-trailers .trailers-tabs-content-item .card__body,
+main .section-trailers .trending-tabs-content-item .card__body,
+main .section-trending .tabs-content-item .card__body,
+main .section-trending .newTabs-content-item .card__body,
+main .section-trending .trailers-tabs-content-item .card__body,
+main .section-trending .trending-tabs-content-item .card__body {
   margin-top: 30px;
   padding: 0 11px;
 }
 main .section-movies .tabs-content-item .card__title,
 main .section-movies .newTabs-content-item .card__title,
 main .section-movies .trailers-tabs-content-item .card__title,
+main .section-movies .trending-tabs-content-item .card__title,
 main .section-trailers .tabs-content-item .card__title,
 main .section-trailers .newTabs-content-item .card__title,
-main .section-trailers .trailers-tabs-content-item .card__title {
+main .section-trailers .trailers-tabs-content-item .card__title,
+main .section-trailers .trending-tabs-content-item .card__title,
+main .section-trending .tabs-content-item .card__title,
+main .section-trending .newTabs-content-item .card__title,
+main .section-trending .trailers-tabs-content-item .card__title,
+main .section-trending .trending-tabs-content-item .card__title {
   font-size: 1rem;
   line-height: 1.2rem;
 }
 main .section-movies .tabs-content-item .card__title a,
 main .section-movies .newTabs-content-item .card__title a,
 main .section-movies .trailers-tabs-content-item .card__title a,
+main .section-movies .trending-tabs-content-item .card__title a,
 main .section-trailers .tabs-content-item .card__title a,
 main .section-trailers .newTabs-content-item .card__title a,
-main .section-trailers .trailers-tabs-content-item .card__title a {
+main .section-trailers .trailers-tabs-content-item .card__title a,
+main .section-trailers .trending-tabs-content-item .card__title a,
+main .section-trending .tabs-content-item .card__title a,
+main .section-trending .newTabs-content-item .card__title a,
+main .section-trending .trailers-tabs-content-item .card__title a,
+main .section-trending .trending-tabs-content-item .card__title a {
   color: var(--tmdbBlack);
   text-decoration: none;
 }
 main .section-movies .tabs-content-item .card__date,
 main .section-movies .newTabs-content-item .card__date,
 main .section-movies .trailers-tabs-content-item .card__date,
+main .section-movies .trending-tabs-content-item .card__date,
 main .section-trailers .tabs-content-item .card__date,
 main .section-trailers .newTabs-content-item .card__date,
-main .section-trailers .trailers-tabs-content-item .card__date {
+main .section-trailers .trailers-tabs-content-item .card__date,
+main .section-trailers .trending-tabs-content-item .card__date,
+main .section-trending .tabs-content-item .card__date,
+main .section-trending .newTabs-content-item .card__date,
+main .section-trending .trailers-tabs-content-item .card__date,
+main .section-trending .trending-tabs-content-item .card__date {
   font-size: 1rem;
   line-height: 1.2rem;
   color: rgba(0, 0, 0, 0.6);
@@ -946,6 +1085,169 @@ main .section-trailers-modal .btn-times .fa {
 }
 
 /* / section-trailers */
+/* section-trending */
+main .section-trending {
+  max-width: 100%;
+  width: 100%;
+  background: url("../../img/trending-bg.svg") no-repeat;
+  background-position-x: center;
+  background-position-y: 210px;
+}
+main .section-trending .trending-tabs-content-item {
+  padding-bottom: 20px;
+}
+
+/* / section-trending */
+/*  section-join */
+main .section-join {
+  background: url("../../img/join-Today-bg.jpg.jpg") no-repeat center center/cover;
+}
+main .section-join__left h3 {
+  margin-top: 30px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: var(--tmdbWhite);
+}
+main .section-join__left p {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: var(--tmdbWeightRegular);
+  line-height: 1.6rem;
+  color: var(--tmdbWhite);
+}
+main .section-join__left p span {
+  opacity: 0.7;
+}
+main .section-join__left a {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: inline-flex;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  padding: 8px 16px;
+  font-weight: var(--tmdbWeightRegular);
+  color: var(--tmdbWhite);
+  background: var(--accountPurple);
+  text-transform: capitalize;
+  text-decoration: none;
+  border-radius: 8px;
+}
+main .section-join__right li {
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  font-weight: var(--tmdbWeightRegular);
+  line-height: 1.3rem;
+  color: var(--tmdbWhite);
+  opacity: 0.8;
+}
+
+/* / section-join */
+/* section-leaderBoard */
+main section .leaderBoard {
+  background: var(--tmdbWhite);
+}
+main section .leaderBoard-info {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+main section .leaderBoard-info h3 {
+  font-size: 1.6rem;
+  font-weight: var(--tmdbWeightSemiBold);
+}
+main section .leaderBoard-info ul {
+  margin-left: 40px;
+  list-style: none;
+}
+main section .leaderBoard-info ul li {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: var(--tmdbBlack);
+  display: flex;
+  align-items: center;
+}
+main section .leaderBoard-info ul li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  display: block;
+  background: linear-gradient(to right, var(--tmdbLighterGreen) 0%, var(--tmdbLightGreen) 100%);
+  border-radius: 50%;
+}
+main section .leaderBoard-info ul li:nth-of-type(2)::before {
+  content: "";
+  background: linear-gradient(to right, var(--tmdbLogoOrange) 0%, var(--tmdbLogoRed) 100%);
+}
+main section .leaderBoard-column {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+main section .leaderBoard-column__avatar {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  background: #235;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+main section .leaderBoard-column__avatar span {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: var(--tmdbWhite);
+}
+main section .leaderBoard-column__data {
+  width: 100%;
+}
+main section .leaderBoard-column__data h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  font-weight: var(--tmdbWeightSemiBold);
+}
+main section .leaderBoard-column__data h4 a {
+  text-decoration: none;
+  color: var(--tmdbBlack);
+}
+main section .leaderBoard-column__data h4 a:hover {
+  color: var(--tmdbLightGreen);
+}
+main section .leaderBoard-column__data p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+main section .leaderBoard-column__data p span {
+  margin-top: 5px;
+}
+main section .leaderBoard-column__data p span:first-of-type {
+  display: flex;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 8px;
+  background: linear-gradient(to right, var(--tmdbLighterGreen) 0%, var(--tmdbLightGreen) 100%);
+  border-radius: 4px;
+}
+main section .leaderBoard-column__data p span:last-of-type {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  font-weight: var(--tmdbWeightBold);
+}
+main section .leaderBoard-column__data p:last-of-type span:first-of-type {
+  flex-grow: 1;
+  background: linear-gradient(to right, var(--tmdbLogoOrange) 0%, var(--tmdbLogoRed) 100%);
+}
+
+/* / section-leaderBoard */
+/**/
+/**/
+/**/
 /*pages end*/
 
 /*# sourceMappingURL=basic.css.map */

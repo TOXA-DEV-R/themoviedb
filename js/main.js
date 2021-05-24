@@ -24,6 +24,7 @@ function tabsFunction(tabs) {
 tabsFunction("tabs");
 tabsFunction("newTabs");
 tabsFunction("trailers-tabs");
+tabsFunction("trending-tabs");
 
 $(function () {
   $(".chart").easyPieChart({

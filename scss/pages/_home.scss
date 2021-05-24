@@ -170,7 +170,8 @@ main .section-media {
 
 /* section-movies */
 main .section-movies,
-main .section-trailers {
+main .section-trailers,
+main .section-trending {
   &__content {
     @include display-Al_center;
     margin-top: 30px;
@@ -182,7 +183,8 @@ main .section-trailers {
   }
   .tabs,
   .newTabs,
-  .trailers-tabs {
+  .trailers-tabs,
+  .trending-tabs {
     display: flex;
     list-style: none;
     border: 1px solid $tmdbDarkBlue;
@@ -439,3 +441,191 @@ main .section-trailers {
   }
 }
 /* / section-trailers */
+
+/* section-trending */
+main .section-trending {
+  max-width: 100%;
+  width: 100%;
+  background: url("../../img/trending-bg.svg") no-repeat;
+  background-position-x: center;
+  background-position-y: 210px;
+  .trending-tabs {
+    &-content {
+      &-item {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+/* / section-trending */
+
+/*  section-join */
+main .section-join {
+  background: url("../../img/join-Today-bg.jpg.jpg") no-repeat center center /
+    cover;
+  &__left {
+    h3 {
+      margin-top: 30px;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      color: $tmdbWhite;
+    }
+    p {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      font-weight: $tmdbWeightRegular;
+      line-height: 1.6rem;
+      color: $tmdbWhite;
+      span {
+        opacity: 0.7;
+      }
+    }
+    a {
+      margin-top: 30px;
+      margin-bottom: 40px;
+      display: inline-flex;
+      font-size: 1.3rem;
+      line-height: 1.4rem;
+      padding: 8px 16px;
+      font-weight: $tmdbWeightRegular;
+      color: $tmdbWhite;
+      background: $accountPurple;
+      text-transform: capitalize;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+  }
+  &__right {
+    li {
+      letter-spacing: 0.5px;
+      font-size: 1rem;
+      font-weight: $tmdbWeightRegular;
+      line-height: 1.3rem;
+      color: $tmdbWhite;
+      opacity: 0.8;
+    }
+  }
+}
+/* / section-join */
+
+/* section-leaderBoard */
+main section .leaderBoard {
+  background: $tmdbWhite;
+  &-info {
+    margin-top: 30px;
+    @include display-Al_center;
+    h3 {
+      font-size: 1.6rem;
+      font-weight: $tmdbWeightSemiBold;
+    }
+    ul {
+      margin-left: 40px;
+      list-style: none;
+      li {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        color: $tmdbBlack;
+        @include display-Al_center;
+        &::before {
+          content: "";
+          width: 7px;
+          height: 7px;
+          margin-right: 10px;
+          display: block;
+          background: linear-gradient(
+            to right,
+            $tmdbLighterGreen 0%,
+            $tmdbLightGreen 100%
+          );
+          border-radius: 50%;
+        }
+        &:nth-of-type(2) {
+          &::before {
+            content: "";
+            background: linear-gradient(
+              to right,
+              $tmdbLogoOrange 0%,
+              $tmdbLogoRed 100%
+            );
+          }
+        }
+      }
+    }
+  }
+  &-column {
+    width: 100%;
+    margin-top: 30px;
+    @include display-Al_center;
+    &__avatar {
+      width: 56px;
+      height: 56px;
+      @include display-Ju_center-Al_center;
+      flex: 0 0 auto;
+      background: #235;
+      border-radius: 50%;
+      margin-right: 10px;
+      span {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        color: $tmdbWhite;
+      }
+    }
+    &__data {
+      width: 100%;
+      h4 {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+        font-weight: $tmdbWeightSemiBold;
+        a {
+          text-decoration: none;
+          color: $tmdbBlack;
+          &:hover {
+            color: $tmdbLightGreen;
+          }
+        }
+      }
+      p {
+        width: 100%;
+        @include display-Al_center;
+        span {
+          margin-top: 5px;
+          &:first-of-type {
+            display: flex;
+            flex: 0 0 auto;
+            width: 40px;
+            height: 8px;
+            background: linear-gradient(
+              to right,
+              $tmdbLighterGreen 0%,
+              $tmdbLightGreen 100%
+            );
+            border-radius: 4px;
+          }
+          &:last-of-type {
+            margin-left: 10px;
+            font-size: 0.8rem;
+            line-height: 0.8rem;
+            font-weight: $tmdbWeightBold;
+          }
+        }
+        &:last-of-type {
+          span {
+            &:first-of-type {
+              flex-grow: 1;
+              background: linear-gradient(
+                to right,
+                $tmdbLogoOrange 0%,
+                $tmdbLogoRed 100%
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* / section-leaderBoard */
+/**/
+/**/
+/**/
