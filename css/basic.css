@@ -455,7 +455,25 @@ header .navbar__menu {
   align-items: center;
 }
 header .navbar__menu li {
+  position: relative;
   margin-right: 14px;
+}
+header .navbar__menu li .menu-init {
+  padding: 15px 25px;
+  list-style: none;
+  position: absolute;
+  width: 173px;
+  background: var(--tmdbWhite);
+  border-radius: 4px;
+  display: none;
+}
+header .navbar__menu li .menu-init li {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+header .navbar__menu li .menu-init__link {
+  text-decoration: none;
+  color: var(--tmdbBlack);
 }
 header .navbar__link {
   display: block;
@@ -465,6 +483,13 @@ header .navbar__link {
   font-weight: var(--tmdbWeightSemiBold);
   font-family: var(--tmdbFamilySoursSans);
   color: var(--tmdbWhite);
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+header .navbar__link:hover .menu-init {
+  display: block;
 }
 header .navbar__right {
   list-style: none;
@@ -513,6 +538,9 @@ header .navbar__right .search .btn {
 }
 header .navbar__right .search .btn .fa {
   font-size: 20px;
+}
+header .navbar__link:hover header .navbar__menu li .menu-init {
+  display: block;
 }
 
 /* header / */
@@ -1245,8 +1273,62 @@ main section .leaderBoard-column__data p:last-of-type span:first-of-type {
 }
 
 /* / section-leaderBoard */
-/**/
-/**/
+/* footer */
+footer {
+  margin-top: 40px;
+  padding: 40px 0;
+  background-image: radial-gradient(at 30% top, #031d33 0%, var(--tmdbDarkBlue) 70%);
+}
+footer .footer-conatiner {
+  max-width: 884px;
+  margin: 0 auto;
+}
+footer .footer-conatiner ul {
+  list-style: none;
+}
+footer .footer-conatiner ul li {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+footer .footer-conatiner ul li h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: var(--tmdbWeightBold);
+  color: var(--tmdbWhite);
+}
+footer .footer-conatiner ul li a {
+  text-decoration: none;
+  color: var(--tmdbWhite);
+}
+footer .footer-conatiner > .row {
+  align-items: flex-end;
+}
+footer .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .footer-logo span {
+  width: 130px;
+  display: block;
+}
+footer .footer-logo a {
+  width: 100%;
+  height: 40px;
+  background: var(--tmdbWhite);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: var(--tmdbWeightBold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--tmdbLightBlue);
+  margin-top: 40px;
+}
+
+/* / footer */
 /**/
 /*pages end*/
 

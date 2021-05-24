@@ -25,7 +25,25 @@ header {
       list-style: none;
       @include display-Al_center;
       li {
+        position: relative;
         margin-right: 14px;
+        .menu-init {
+          padding: 15px 25px;
+          list-style: none;
+          position: absolute;
+          width: 173px;
+          background: $tmdbWhite;
+          border-radius: 4px;
+          display: none;
+          li {
+            font-size: 1rem;
+            line-height: 1.8rem;
+          }
+          &__link {
+            text-decoration: none;
+            color: $tmdbBlack;
+          }
+        }
       }
     }
     &__link {
@@ -36,6 +54,15 @@ header {
       font-weight: $tmdbWeightSemiBold;
       font-family: $tmdbFamilySoursSans;
       color: $tmdbWhite;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        .menu-init {
+          display: block;
+        }
+      }
     }
     &__right {
       list-style: none;
@@ -88,6 +115,13 @@ header {
             font-size: 20px;
           }
         }
+      }
+    }
+  }
+  .navbar__link {
+    &:hover {
+      header .navbar__menu li .menu-init {
+        display: block;
       }
     }
   }
@@ -626,6 +660,60 @@ main section .leaderBoard {
   }
 }
 /* / section-leaderBoard */
-/**/
-/**/
+
+/* footer */
+footer {
+  margin-top: 40px;
+  padding: 40px 0;
+  background-image: radial-gradient(at 30% top, #031d33 0%, $tmdbDarkBlue 70%);
+  .footer {
+    &-conatiner {
+      max-width: 884px;
+      margin: 0 auto;
+      ul {
+        list-style: none;
+        li {
+          font-size: 1rem;
+          line-height: 1.3rem;
+          h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: $tmdbWeightBold;
+            color: $tmdbWhite;
+          }
+          a {
+            text-decoration: none;
+            color: $tmdbWhite;
+          }
+        }
+      }
+      > .row {
+        align-items: flex-end;
+      }
+    }
+    &-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      span {
+        width: 130px;
+        display: block;
+      }
+      a {
+        width: 100%;
+        height: 40px;
+        background: $tmdbWhite;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: $tmdbWeightBold;
+        @include display-Ju_center-Al_center;
+        color: $tmdbLightBlue;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+/* / footer */
 /**/
