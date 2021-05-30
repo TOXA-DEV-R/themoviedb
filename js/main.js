@@ -1,4 +1,72 @@
 "use strict";
+
+function apiFunction(tabsItemsName, name, element) {
+  const apiKey = "2dd08287b759101888b5a20c23399375";
+  const IMGURL = "https://image.tmdb.org/t/p/w500/";
+  let data = fetch(
+    // `https://api.themoviedb.org/3/movie/popular?api_key=2dd08287b759101888b5a20c23399375&language=en-US&page=1`
+    //   `https://api.themoviedb.org/3/tv/popular?api_key=2dd08287b759101888b5a20c23399375&language=en-US&page=1`
+    `https://api.themoviedb.org/3/${tabsItemsName}/${name}?api_key=${apiKey}&language=en-US&page=1`
+  )
+    .then((data) => data.json())
+    .then((movies) => {
+      if (tabsItemsName === "movie") {
+        let { results } = movies;
+        let streaming = document.querySelector(element);
+
+        let dataTabs = "";
+        results.forEach((item) => {
+          const { poster_path, title, release_date } = item;
+          dataTabs += `<div class="card">
+          <a href="#" class="card__img">
+            <img src="${IMGURL + poster_path}" alt="${title}">
+            <div class="chart-block">
+              <div class="chart" data-percent="89"><span>89<sup>%</sup></span><canvas height="37" width="37"></canvas></div>
+            </div>
+          </a>
+          <div class="card__body">
+            <h3 class="card__title">
+              <a href="/">${title}</a>
+            </h3>
+            <span class="card__date">${release_date}</span>
+          </div>
+        </div>`;
+        });
+        streaming.innerHTML = dataTabs;
+      }
+
+      if (tabsItemsName === "tv") {
+        let { results } = movies;
+        let streaming = document.querySelector(element);
+
+        console.log(results);
+        let dataTabs = "";
+        results.forEach((item) => {
+          const { poster_path, name, first_air_date } = item;
+          console.log(name);
+          dataTabs += `<div class="card">
+            <a href="#" class="card__img">
+              <img src="${IMGURL + poster_path}" alt="${name}">
+              <div class="chart-block">
+                <div class="chart" data-percent="89"><span>89<sup>%</sup></span><canvas height="37" width="37"></canvas></div>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">
+                <a href="/">${name}</a>
+              </h3>
+              <span class="card__date">${first_air_date}</span>
+            </div>
+          </div>`;
+        });
+        streaming.innerHTML = dataTabs;
+      }
+    })
+    .catch((error) => console.log(error));
+}
+apiFunction("movie", "popular", "#streaming");
+apiFunction("tv", "popular", "#on-tv");
+
 function tabsFunction(tabs) {
   document.querySelector(`.${tabs}`).addEventListener("click", function (e) {
     if (
@@ -8,6 +76,7 @@ function tabsFunction(tabs) {
       e.target.parentElement.parentElement
         .querySelector(".active")
         .classList.remove("active");
+
       e.target.parentElement.classList.add("active");
       const tabContentName = e.target.parentElement.dataset.content;
 
@@ -50,11 +119,6 @@ btnTimes.addEventListener("click", function () {
   trailersModal.classList.remove("active");
 });
 
-const navbarLinks = document.querySelectorAll("header .navbar__link");
-const navbarLinksInit = document.querySelectorAll(
-  "header .navbar__menu li .menu-init"
-);
-
 // modal player
 let player;
 function onYouTubeIframeAPIReady() {
@@ -78,7 +142,10 @@ function onPlayerReady() {
   }
 }
 // modal player /
-
+const navbarLinks = document.querySelectorAll("header .navbar__link");
+const navbarLinksInit = document.querySelectorAll(
+  "header .navbar__menu li .menu-init"
+);
 navbarLinks.forEach((item, index) => {
   let setBoolean = true;
   item.addEventListener("mousedown", function () {

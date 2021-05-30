@@ -1,0 +1,51 @@
+main .dropdown-menu {
+  margin-top: 66px;
+  &__items {
+    max-width: 385px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    &-init {
+      position: absolute;
+      width: 203px;
+      height: auto;
+      padding: 10px 0;
+      background: white;
+      list-style: none;
+      border-radius: 0 0 0.25rem 0.25rem;
+      box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.3), 0 4px 5px 0 rgb(0, 0, 0, 0.4);
+    }
+  }
+  &__item {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid transparent;
+    position: relative;
+    &.active {
+      border-color: $tmdbLightBlue;
+    }
+    &-init {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: 0 20px;
+      background: transparent;
+      &:hover {
+        background: #f8f9fa;
+      }
+    }
+  }
+  &__btn {
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    .fas {
+      font-size: 0.9rem;
+      line-height: 1rem;
+      transform: translateY(-3px);
+      margin-left: 5px;
+    }
+  }
+}
